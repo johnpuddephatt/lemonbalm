@@ -1,0 +1,61 @@
+$perspective: 1px
+
+@mixin perspective($value)
+  [parallax="#{$value}"]
+    transform: translate3D(-50%,-50%,$value * $perspective) scale(($perspective - ($value * $perspective))/$perspective)
+
+@media screen and (min-width: 60rem)
+  @supports ((perspective: 1px) and (not (-webkit-overflow-scrolling: touch)))
+    html, body
+      overflow: hidden
+    body
+      transform: translateZ(0px)
+    .viewport
+      position: absolute
+      width: 100%
+      height: 100%
+      overflow-x: hidden
+      overflow-y: auto
+      perspective: $perspective
+      perspective-origin: 50% 50%
+      scroll-behavior: smooth
+      transition: background-color 1500ms, color 1500ms linear
+      background-color: $vivid_tangerine
+      color: white
+      &[data-section="2"]
+        background-color: $blue_bayoux
+        color: white
+      &[data-section="3"]
+        background-color: $watusi
+        color: $mine_shaft
+      &[data-section="4"]
+        background-color: $medium_aquamarine
+        color: white
+      &[data-section="5"]
+        background-color: $salmon
+        color: white
+
+    .container, .column, .section, [parallax]
+      transform-style: preserve-3d
+    .section
+      background-color: transparent !important
+      color: inherit !important
+    [parallax]
+      position: absolute
+      transform-origin: right center
+    @include perspective(-.25)
+    @include perspective(-.2)
+    @include perspective(-.15)
+    @include perspective(-.1)
+    @include perspective(-.05)
+    @include perspective(0)
+    @include perspective(.05)
+    @include perspective(.1)
+    @include perspective(.15)
+    @include perspective(.2)
+    @include perspective(.25)
+    @include perspective(.3)
+    @include perspective(.35)
+    @include perspective(.4)
+    @include perspective(.45)
+    @include perspective(.5)
