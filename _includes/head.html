@@ -8,7 +8,7 @@
     <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
     <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}" />
     <!-- <script src="scripts/parallax.js"></script> -->
-    <script src="scripts/aos.js"></script>
+    <!-- <script src="scripts/aos.js"></script> -->
     <script>
       document.addEventListener('DOMContentLoaded', function() {
         // initializeParallax(document.querySelector('.viewport'));
@@ -21,7 +21,9 @@
           for (var i = 0; i < section.length; i++) {
 
             if (clip.scrollTop - (.5 * window.innerHeight) < section[i].offsetTop) {
-              clip.dataset.section = i + 1;
+              if(clip.dataset.section !== i + 1) {
+                clip.dataset.section = i + 1;
+              }
               break;
             }
           }

@@ -5,7 +5,7 @@
 @import 'bourbon/bourbon'
 @import 'base/base'
 @import 'neat/neat'
-@import 'aos'
+
 
 @import 'fonts'
 @import 'colours'
@@ -32,7 +32,7 @@ body,html
 
 .section
   color: white
-  height: (9/16 * 120) + vw
+  height: (9/16 * 125) + vw
   @media screen and (orientation: portrait)
     height: (16/9 * 100) + vw
   position: relative
@@ -61,9 +61,21 @@ body,html
   background-image: url(images/clean-gray-paper.png)
   opacity: .5
 
+$homepage-layout-grid: (columns: 2, gutter: 2 * $base-spacing,)
+
+.container
+  max-width: 1280px
+  margin-left: auto
+  margin-right: auto
+  height: 100%
+  display: flex
+  @include grid-container($homepage-layout-grid)
+  @include grid-visual(rgba(255,255,255,0.2), $homepage-layout-grid)
+
 .homepage-title
   text-transform: lowercase
   font-size: modular-scale(5)
+  margin-top: $base-spacing
   margin-bottom: $small-spacing
 
 .lemonbalm-logo
@@ -78,23 +90,17 @@ body,html
   margin-top: 1.5 * $base-spacing
   margin-bottom: $small-spacing
 
-.container
-  max-width: 1080px
-  margin-left: auto
-  margin-right: auto
-  height: 100%
-  display: flex
 
 .column
   position: relative
   align-self: center
-  @include grid-column(6)
+  @include grid-column(1, $homepage-layout-grid)
   &--image
     height: 100%
   &--text
     z-index: 999
   &--right
-    @include grid-push(6)
+    @include grid-push(1)
   &--centred
     text-align: center
     @include grid-column(12)
