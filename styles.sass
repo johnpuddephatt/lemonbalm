@@ -32,23 +32,27 @@ body,html
 
 .section
   color: white
-  height: (9/16 * 125) + vw
+  height: (9/16 * 120) + vw
   @media screen and (orientation: portrait)
     height: (16/9 * 100) + vw
   position: relative
   &--one
     background-color: $vivid_tangerine
     margin-top: (-9/16 * 10) + vw
-  &--two
+  &--two, &--six
     background-color: $blue_bayoux
-  &--three
+  &--three, &--seven
     background-color: $watusi
     color: $mine_shaft
   &--four
     background-color: $medium_aquamarine
   &--five
     background-color: $salmon
-
+  &--six
+    .section-heading, .pullout-stat
+      color: $sugar_cane
+  &--seven
+    height: (9/16 * 100) + vw
 
 .texture
   position: fixed
@@ -90,6 +94,10 @@ $homepage-layout-grid: (columns: 2, gutter: 2 * $base-spacing,)
   margin-top: 1.5 * $base-spacing
   margin-bottom: $small-spacing
 
+.pullout-stat
+  font-size: modular-scale(10)
+  font-family: $heading-font-family
+  line-height: 1
 
 .column
   position: relative
@@ -103,4 +111,16 @@ $homepage-layout-grid: (columns: 2, gutter: 2 * $base-spacing,)
     @include grid-push(1)
   &--centred
     text-align: center
-    @include grid-column(12)
+    @include grid-column(1.5, $homepage-layout-grid)
+    margin-left: auto
+    margin-right: auto
+
+footer
+  background-color: $breaker_bay
+  padding: $base-spacing
+  text-align: center
+  p
+    margin-bottom: 0
+    padding-bottom: 0
+    padding-top: 3 * $base-spacing
+    color: #fff
