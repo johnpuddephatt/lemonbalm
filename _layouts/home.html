@@ -21,8 +21,10 @@ layout: default
         <p>That means we not only create capable gardeners, we also help develop social skills, improve mobility, increase agility, and work towards other agreed outcomes.</p>
       </div>
       <div class="column column--image">
-        {% include /images/home-section-2/man.svg class="man" alt="" parallax="-0.25" %}
-        {% include /images/home-section-2/woman.svg class="woman" alt="" parallax="-0.05" %}
+        <div class="image-inner">
+          {% include /images/home-section-2/man.svg class="man" alt="" parallax="-0.25" %}
+          {% include /images/home-section-2/woman.svg class="woman" alt="" parallax="-0.05" %}
+        </div>
       </div>
     </div>
   </div>
@@ -30,8 +32,10 @@ layout: default
   <div class="section section--three">
     <div class="container">
       <div class="column column--image">
-        {% include /images/home-section-3/fruitandveg.svg class="fruitandveg" parallax="-0.1" alt="" %}
-        {% include /images/home-section-3/plantpots.svg class="plantpots" parallax="-0.1" alt="" %}
+        <div class="image-inner">
+          {% include /images/home-section-3/fruitandveg.svg class="fruitandveg" parallax="-0.1" alt="" %}
+          {% include /images/home-section-3/plantpots.svg class="plantpots" parallax="-0.1" alt="" %}
+        </div>
       </div>
       <div class="column column--text">
         <h2 class="section-heading">We get people gardening</h2>
@@ -47,15 +51,6 @@ layout: default
 
   <div class="section section--four">
     <div class="container">
-      <div class="column column--image">
-        {% include /images/home-section-4/leaf.svg class="leaf" alt="" parallax="-0.15" %}
-        {% include /images/home-section-4/leaf.svg class="leaf" alt="" parallax="-0.1" %}
-        {% include /images/home-section-4/leaf.svg class="leaf" alt="" parallax="-0.05" %}
-        {% include /images/home-section-4/leaf.svg class="leaf" alt="" parallax="0.1" %}
-        {% include /images/home-section-4/leaf.svg class="leaf" alt="" parallax="0.2" %}
-
-        {% include /images/home-section-4/yogi.svg class="yogi" alt="" parallax="0.05" %}
-      </div>
       <div class="column column--text">
         <h2 class="section-heading">We believe nature is essential for wellbeing, that gardening is good for body and mind</h2>
         <p>This is the idea that drives our work, it underpins everything we do. It’s a belief that’s both rational and evidence-based, shaped by the ﬁndings of academic research as well as by our own experiences.</p>
@@ -66,34 +61,49 @@ layout: default
           <p>Our work is carefully tailored to get people active, whatever their level of ﬁtness and mobility.</p>
         </div>
       </div>
+      <div class="column column--image">
+        <div class="image-inner">
+          {% include /images/home-section-4/leaf.svg class="leaf" alt="" parallax="-0.15" %}
+          {% include /images/home-section-4/leaf.svg class="leaf" alt="" parallax="-0.1" %}
+          {% include /images/home-section-4/leaf.svg class="leaf" alt="" parallax="-0.05" %}
+          {% include /images/home-section-4/leaf.svg class="leaf" alt="" parallax="0.1" %}
+          {% include /images/home-section-4/leaf.svg class="leaf" alt="" parallax="0.2" %}
+
+          {% include /images/home-section-4/yogi.svg class="yogi" alt="" parallax="0.05" %}
+        </div>
+      </div>
 
     </div>
   </div>
 
   <div class="section section--five">
     <div class="container">
+      <div class="column column--image">
+        <div class="image-inner">
+          {% include /images/home-section-5/plant.svg class="plant" alt="" parallax="0.1" %}
+          {% include /images/home-section-5/lady.svg class="lady" alt="" parallax="-0.1" %}
+        </div>
+      </div>
       <div class="column column--text">
         <h2 class="section-heading">There’s more to a successful garden than seeds, soil &amp; water</h2>
         <p>Lemon Balm is led by professionals with qualiﬁcations in social and therapeutic horticulture, garden design, forest schools and volunteer management.</p>
         <p>Trained by Occupational Therapists, our approach and outcomes are evidence-based and rigorous.</p>
-      </div>
-      <div class="column column--image">
-        {% include /images/home-section-5/plant.svg class="plant" alt="" parallax="0.1" %}
-        {% include /images/home-section-5/lady.svg class="lady" alt="" parallax="-0.1" %}
       </div>
     </div>
   </div>
 
   <div class="section section--six">
     <div class="container">
-      <div class="column column--image">
-        {% include /images/home-section-6/plants.svg class="potplant" alt="" parallax="-0.2" %}
-        {% include /images/home-section-6/planters.svg class="planters" alt="" parallax="-0.1" %}
-      </div>
       <div class="column column--text">
         <h2 class="section-heading">Our approach is proven</h2>
         <p class="pullout-stat-heading">90%</p>
         <p class="pullout-stat-body">of people who attended our pilot programme said their mood had improved as a result of our work.</p>
+      </div>
+      <div class="column column--image">
+        <div class="image-inner">
+          {% include /images/home-section-6/plants.svg class="potplant" alt="" parallax="-0.2" %}
+          {% include /images/home-section-6/planters.svg class="planters" alt="" parallax="-0.1" %}
+        </div>
       </div>
     </div>
   </div>

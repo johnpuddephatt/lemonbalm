@@ -79,7 +79,7 @@ svg
   padding: 10vmin (9/16)*10vmin
   @include grid-media($grid-landscape)
     @include grid-container
-    @include grid-visual
+    // @include grid-visual
     flex-direction: row
     max-width: 1330px
     margin-left: auto
@@ -102,6 +102,19 @@ svg
       height: 100%
       margin-bottom: 0
       order: initial
+      position: relative
+      .image-inner
+        position: absolute
+        width: 50vw
+        left: 0
+        top: 0
+        height: 100%
+        background-color: rgba(200,200,200,0.25)
+        perspective-origin: center center
+  &--image:first-child .image-inner
+    left: auto
+    right: 0
+
   &--text
     z-index: 999
     flex: 1 0 auto
