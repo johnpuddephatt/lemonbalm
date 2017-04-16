@@ -1,11 +1,27 @@
 .man,
 .woman
-  width: 70%
-  height: auto
-  top: 52.5%
-  left: 95%
+  height: 100%
+  bottom: 0%
+  right: $small-spacing
+  width: auto
 
 .woman
-  left: 22.5%
-  width: 55%
-  top: 52.5%
+  left: 0
+  right: auto
+
+@media screen and (min-width: $large-screen) and (orientation: landscape)
+  @supports ((perspective: 1px) and (not (-webkit-overflow-scrolling: touch)))
+
+    .man,
+    .woman
+      width: 70%
+      top: 52.5%
+      left: 95%
+      height: auto
+      bottom: auto
+      right: auto
+
+    .woman
+      left: 22.5%
+      width: 55%
+      top: 52.5%

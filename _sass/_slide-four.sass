@@ -1,22 +1,53 @@
 .leaf
-  width: 55%
+  height: 70%
+  transform: translateX(-50%)
   &:nth-child(1)
-    left: 60%
-    top: 20%
+    left: 5%
+    top: -25%
   &:nth-child(2)
-    top: 37.5%
-    left: 12.5%
+    top: -25%
+    left: 95%
   &:nth-child(3)
-    top: 52.5%
-    left: 77.5%
+    top: -5%
+    left: 55%
   &:nth-child(4)
-    top: 75%
-    left: 15%
+    top: 35%
+    left: 10%
   &:nth-child(5)
-    top: 87.5%
-    left: 80%
+    top: 32.5%
+    left: 77.5%
 
 .yogi
-  width: 85%
-  top: 60%
   left: 50%
+  height: 85%
+  width: auto
+  bottom: 5%
+  transform: translateX(-50%)
+
+
+@media screen and (min-width: $large-screen) and (orientation: landscape)
+  @supports ((perspective: 1px) and (not (-webkit-overflow-scrolling: touch)))
+    .leaf
+      width: 55%
+      &:nth-child(1)
+        left: 60%
+        top: 20%
+      &:nth-child(2)
+        top: 37.5%
+        left: 12.5%
+      &:nth-child(3)
+        top: 52.5%
+        left: 77.5%
+      &:nth-child(4)
+        top: 75%
+        left: 15%
+        display: block
+      &:nth-child(5)
+        top: 87.5%
+        left: 80%
+        display: block
+
+    .yogi
+      width: 85%
+      top: 60%
+      left: 50%

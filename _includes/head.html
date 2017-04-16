@@ -16,10 +16,9 @@
 
         var clip = document.querySelector('.viewport');
         var section = clip.querySelectorAll('.section');
-        clip.addEventListener('scroll', function() {
 
+        function findActiveClips() {
           for (var i = 0; i < section.length; i++) {
-
             if (clip.scrollTop - (.5 * window.innerHeight) < section[i].offsetTop) {
               if(clip.dataset.section !== i + 1) {
                 clip.dataset.section = i + 1;
@@ -27,7 +26,16 @@
               break;
             }
           }
+        }
+
+        clip.addEventListener('scroll', function() {
+          findActiveClips();
         });
+        window.addEventListener('DOMContentLoaded', function() {
+          findActiveClips();
+        });
+
+
 
       });
     </script>

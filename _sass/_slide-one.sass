@@ -1,11 +1,35 @@
+.homepage-title
+  text-transform: lowercase
+  font-size: modular-scale(4)
+  margin-top: 0
+  margin-bottom: 0
+  @media screen and (min-width: $medium-screen)
+    font-size: modular-scale(5)
+
+
+.lemonbalm-logo
+  height: 3 * $base-spacing
+  width: auto
+  margin: 0 auto -3 * $base-spacing
+
 .garland
   position: absolute
-  left: 50%
-  width: 110vw
+  left: 100%
+  width: 275vw
   transform: translateX(-50%)
   &--upper
-    bottom: 50%
-    max-height: 60%
+    top: -15vh
   &--lower
-    top: 100vh
-    transform: translate(-50%, -65%)
+    bottom: -5vh
+
+@media screen and (min-width: $large-screen) and (orientation: landscape)
+  @supports ((perspective: 1px) and (not (-webkit-overflow-scrolling: touch)))
+    .garland
+      width: 110vw
+      left: 50%
+      &--upper
+        top: auto
+        bottom: 50%
+      &--lower
+        top: auto
+        bottom: (-9/16 * 10) + vw

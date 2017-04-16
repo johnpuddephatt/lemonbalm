@@ -1,10 +1,30 @@
 .planters
-  width: 140%
-  top: 50%
-  left: 60%
-
+  height: 105%
+  width: auto
+  left: 55%
+  bottom: 0
+  transform: translate(-50%, 0)
 
 .potplant
-  width: 20%
-  left: 43%
-  top: 42.5%
+  left: 50%
+  width: auto
+  height: 40%
+  top: 10%
+  transform: translateX(-50%)
+
+
+@media screen and (min-width: $large-screen) and (orientation: landscape)
+  @supports ((perspective: 1px) and (not (-webkit-overflow-scrolling: touch)))
+
+    .planters
+      width: 135%
+      top: 50%
+      left: 60%
+      height: auto
+
+
+    .potplant
+      width: 20%
+      left: 43%
+      top: 42.5%
+      height: auto

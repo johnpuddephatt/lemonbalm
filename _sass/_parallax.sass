@@ -2,9 +2,9 @@ $perspective: 1px
 
 @mixin perspective($value)
   [parallax="#{$value}"]
-    transform: translate3D(-50%,-50%,$value * $perspective) scale(($perspective - ($value * $perspective))/$perspective)
+    transform: translate3D(-50%,-50%,$value * $perspective) scale(($perspective - ($value * $perspective))/$perspective) !important
 
-@media screen and (min-width: 60rem)
+@media screen and (min-width: $large-screen) and (orientation: landscape)
   @supports ((perspective: 1px) and (not (-webkit-overflow-scrolling: touch)))
     html, body
       overflow: hidden
@@ -22,21 +22,54 @@ $perspective: 1px
       scroll-behavior: smooth
       transition: background-color 1000ms linear
       background-color: $vivid_tangerine
-
-      &[data-section="2"],&[data-section="6"]
+      svg
+        display: none
+      &[data-section="1"]
+        .section--one, .section--two
+          svg
+            display: block
+      &[data-section="2"]
         background-color: $blue_bayoux
-      &[data-section="3"],&[data-section="7"]
+        .section--one, .section--two, .section--three
+          svg
+            display: block
+      &[data-section="3"]
         background-color: $watusi
+        .section--two, .section--three, .section--four
+          svg
+            display: block
       &[data-section="4"]
         background-color: $medium_aquamarine
+        .section--three, .section--four, .section--five
+          svg
+            display: block
       &[data-section="5"]
         background-color: $salmon
-
+        .section--four, .section--five, .section--six
+          svg
+            display: block
+      &[data-section="6"]
+        background-color: $blue_bayoux
+        .section--five, .section--six, .section--seven
+          svg
+            display: block
+      &[data-section="7"]
+        background-color: $watusi
+        .section--six, .section--seven, .section--eight
+          svg
+            display: block
 
     .container, .column, .section, [parallax]
       transform-style: preserve-3d
     .section
       background-color: transparent !important
+      height: (9/16 * 120) + vw
+      overflow: visible
+      &--one
+        height: 100vh
+      &--seven
+        height: (9/16 * 100) + vw
+
     [parallax]
       position: absolute
       transform-origin: right center
