@@ -1,5 +1,5 @@
 $grid-portrait: (columns: 1, gutter: $base-spacing, media: "(orientation: portrait)")
-$grid-landscape: (columns: 2, gutter: 1.5 * $base-spacing, media: "(orientation: landscape)")
+$grid-landscape: (columns: 12, gutter: 2 * $base-spacing, media: "(orientation: landscape)")
 
 
 *
@@ -60,60 +60,46 @@ svg
   background-image: url(images/clean-gray-paper.png)
   opacity: .5
 
-
-.col
-  float: left
-  width: 50%
-  padding-left: 1rem
-  &:first-child
-    padding-left: 0
-  h3
-    margin-top: $small-spacing
-
 .container
   height: 100%
   display: flex
-  @include grid-container()
+  // @include grid-container()
   flex-direction: column
   justify-content: center
-  padding: 10vmin (9/16)*10vmin
+  &::before,
+  &::after
+    content: ''
+    display: block
+
+  // padding: 10vmin (9/16)*10vmin
   @include grid-media($grid-landscape)
-    @include grid-container
+    // @include grid-container
     // @include grid-visual
     flex-direction: row
-    max-width: 1330px
-    margin-left: auto
-    margin-right: auto
+    justify-content: space-between
+    // max-width: 1330px
+    // margin-left: auto
+    // margin-right: auto
 
 .column
   position: relative
   align-self: center
   width: 100%
-  @include grid-media($grid-landscape)
-    @include grid-column(1)
-    &--right
-      @include grid-push(1)
+  border: 2px dotted rgba(255,255,255,.15)
+
+
   &--image
     flex: 1 1 55%
     margin-bottom: $base-spacing
     order: 1
     @include grid-media($grid-landscape)
-      flex: 0 0 auto
+
+      flex: 0 0 55.012%
       height: 100%
       margin-bottom: 0
       order: initial
       position: relative
-      .image-inner
-        position: absolute
-        width: 50vw
-        left: 0
-        top: 0
-        height: 100%
-        background-color: rgba(200,200,200,0.25)
-        perspective-origin: center center
-  &--image:first-child .image-inner
-    left: auto
-    right: 0
+      // background-color: rgba(200,200,200,0.25)
 
   &--text
     z-index: 999
@@ -128,7 +114,7 @@ svg
     //   margin-bottom: 10vmin
     @include grid-media($grid-landscape)
       text-align: left
-      flex: 0 0 auto
+      flex: 0 0 34%
       order: initial
       height: auto
       margin-top: 0
@@ -136,7 +122,7 @@ svg
   &--centred
     text-align: center
     @include grid-media($grid-landscape)
-      @include grid-column(1.5)
+      @include grid-column(8)
       margin-left: auto
       margin-right: auto
 
