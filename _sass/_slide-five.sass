@@ -1,22 +1,24 @@
-
-.section--five
-  .column--image
-    // overflow: hidden
-    // @include grid-media($grid-landscape)
-    //   overflow: visible
-
-
 .plant
-  bottom: 0%
-  height: 105%
+  bottom: 5%
+  height: 90%
   width: auto
-  left: 15%
+  left: 50%
+  z-index: 98
 
 .lady
-  bottom: 0
-  height: 100%
-  width: auto
-  left: 45%
+  top: 5%
+  width: 70%
+  left: -2.5%
+
+.lady-lower
+  display: none
+
+.pot
+  width: 35%
+  left: 55%
+  bottom: 0%
+  z-index: 99
+
 
 @media screen and (min-width: $large-screen) and (orientation: landscape)
   @supports ((perspective: 1px) and (not (-webkit-overflow-scrolling: touch)))
@@ -24,13 +26,23 @@
   .plant
     width: 60%
     height: auto
-    left: 67.5%
-    top: 57.5%
+    left: 70%
+    top: 52.5%
     bottom: auto
 
   .lady
-    left: 22.5%
+    left: 20%
     bottom: auto
     top: 52.5%
     width: 55%
     height: auto
+
+  .lady-lower
+    display: block
+
+
+  .pot
+    width: 40%
+    left: 70%
+    bottom: -10%
+    z-index: 99

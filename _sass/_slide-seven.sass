@@ -2,25 +2,37 @@
   overflow: hidden
 
 .plant_A
-  width: 20vw
+  width: 15vw
   bottom: -$base-spacing
   &--one
-    left: 5%
+    left: 2%
   &--two
     left: 40%
     width: 17.5vw
     z-index: 2
   &--three
     left: 70%
+    display: none
 
 .plant_B
-  width: 20vw
+  width: 15vw
   bottom: -$base-spacing
   &--one
-    left: 22.5%
+    left: 19%
   &--two
     left: 60%
     width: 15vw
+
+.plant_C
+  bottom: -$base-spacing
+  width: 15vw
+  &--one
+    left: 30%
+  &--two
+    left: 45%
+    display: none
+  &--three
+    left: 86%
 
 .gardenerraking
   display: none
@@ -34,43 +46,45 @@
     .gardenerraking
       display: block
       width: 25%
-      left: 15vw
-      bottom: -44%
+      left: 0vw
+      bottom: -$small-spacing
       top: auto
-      
+
     .plant_A
       width: 6vw
       bottom: -11%
       &--one
-        left: 40%
+        left: 37.5%
       &--two
-        left: 60%
+        left: 59%
         width: 7vw
         bottom: -13%
       &--three
-        left: 75%
+        left: 76%
+        display: block
 
     .plant_B
       width: 6vw
       bottom: -13%
       &--one
-        left: 55%
+        left: 52.5%
         bottom: -7%
       &--two
-        left: 75%
+        left: 74%
         width: 7.5vw
         bottom: -8%
 
     .plant_C
       &--one
         width: 4.5vw
-        left: 32.5%
+        left: 30%
         bottom: -9%
       &--two
-        left: 47.5%
+        left: 45%
         bottom: -12.5%
         width: 7vw
+        display: block
       &--three
-        left: 67.5%
+        left: 66%
         width: 6vw
         bottom: -11%

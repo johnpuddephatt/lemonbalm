@@ -9,8 +9,8 @@ html
   font-size: 56.25%
   @media screen and (min-width: $large-screen)
     font-size: 62.5%
-  // @media screen and (min-width: $xl-screen)
-  //   font-size: 68.75%
+  @media screen and (min-width: $xl-screen)
+    font-size: 68.75%
 
 
 body,html
@@ -28,6 +28,9 @@ svg
   height: 100vh
   position: relative
   overflow: hidden
+  padding: $base-spacing
+  @include grid-media($grid-landscape)
+    padding: 0
   &--one
     background-color: $vivid_tangerine
   &--two, &--six
@@ -63,18 +66,9 @@ svg
 .container
   height: 100%
   display: flex
-  // @include grid-container()
   flex-direction: column
   justify-content: center
-  // &::before,
-  // &::after
-  //   content: ''
-  //   display: block
-
-  // padding: 10vmin (9/16)*10vmin
   @include grid-media($grid-landscape)
-    // @include grid-container
-    // @include grid-visual
     flex-direction: row
     justify-content: space-around
     width: 85%
@@ -89,7 +83,7 @@ svg
 
 
   &--image
-    flex: 1 1 55%
+    flex: 1 1 50%
     margin-bottom: $base-spacing
     order: 1
     @include grid-media($grid-landscape)
@@ -104,12 +98,9 @@ svg
     flex: 1 0 auto
     text-align: center
     order: 2
-    // &:first-child
-    //   margin-top: 10vmin
-    //   margin-bottom: $base-spacing
-    // &:last-child
-    //   margin-top: $base-spacing
-    //   margin-bottom: 10vmin
+    p:last-child
+      margin-bottom: 0
+
     @include grid-media($grid-landscape)
       text-align: left
       flex: 0 0 38%

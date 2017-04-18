@@ -6,6 +6,7 @@
   bottom: 0
   height: 100%
 
+
 @media screen and (min-width: $large-screen) and (orientation: landscape)
   @supports ((perspective: 1px) and (not (-webkit-overflow-scrolling: touch)))
 
@@ -13,12 +14,22 @@
       right: -227.5%
       bottom: -25%
       height: 10 * $base-spacing
+
+    // .fruitandveg
+    //   display: block
+    //   height: auto
+    //   width: 95%
+    //   position: absolute
+    //   left: auto
+    //   right: -22.5vw
+    //   top: 50%
+
+
     .fruitandveg
       display: block
-      height: auto
-      width: 95%
-      position: absolute
-      left: auto
-      right: -22.5vw
+      height: 85%
+      width: auto
       top: 50%
-
+      left: 0
+      &--right
+        left: 100%

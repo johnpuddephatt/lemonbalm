@@ -29,19 +29,30 @@ layout: default
 
   <div class="section section--three">
     <div class="container">
-      <div class="column column--image">
+      <div class="column column--centred">
+        <h2 class="section-heading">We get people gardening</h2>
+        <h3 type="button" class="section-subheading">We run sessions</h3>
+        <p>Some information goes here, plus link through to seperate page with more info.</p>
+        <h3 type="button" class="section-subheading">We create gardens</h3>
+        <p>Some information goes here, plus link through to seperate page with more info.</p>
+        <h3 type="button" class="section-subheading">We train &amp; consult</h3>
+        <p>Some information goes here, plus link to seperate page with more info.</p>
+      </div>
+      {% include /images/home-section-3/fruitandveg-left.svg class="fruitandveg fruitandveg--left" parallax="-0.1" alt="" %}
+      {% include /images/home-section-3/fruitandveg-right.svg class="fruitandveg fruitandveg--right" parallax="-0.1" alt="" %}
+      <!-- <div class="column column--image">
         {% include /images/home-section-3/fruitandveg.svg class="fruitandveg" parallax="-0.1" alt="" %}
         {% include /images/home-section-3/plantpots.svg class="plantpots" parallax="-0.1" alt="" %}
       </div>
       <div class="column column--text">
         <h2 class="section-heading">We get people gardening</h2>
-        <h3 class="section-subheading">Running sessions</h3>
+        <h3 type="button" class="section-subheading">We run sessions</h3>
         <p>Some information goes here, plus link through to seperate page with more info.</p>
-        <h3 class="section-subheading">Creating gardens</h3>
+        <h3 type="button" class="section-subheading">We create gardens</h3>
         <p>Some information goes here, plus link through to seperate page with more info.</p>
-        <h3 class="section-subheading">Delivering training &amp; consultancy</h3>
+        <h3 type="button" class="section-subheading">We train &amp; consult</h3>
         <p>Some information goes here, plus link to seperate page with more info.</p>
-      </div>
+      </div> -->
     </div>
   </div>
 
@@ -72,8 +83,9 @@ layout: default
   <div class="section section--five">
     <div class="container">
       <div class="column column--image">
-        {% include /images/home-section-5/plant.svg class="plant" alt="" parallax="0.1" %}
-        {% include /images/home-section-5/lady.svg class="lady" alt="" parallax="-0.1" %}
+        {% include /images/home-section-5/plant.svg class="plant" alt="" parallax="-0.1" %}
+        {% include /images/home-section-5/pot.svg class="pot" alt="" parallax="-0.05" %}
+        {% include /images/home-section-5/lady.svg class="lady" alt="" parallax="-0.15" %}
       </div>
       <div class="column column--text">
         <h2 class="section-heading">There’s more to a successful garden than seeds, soil &amp; water</h2>
@@ -104,7 +116,7 @@ layout: default
         <h2 class="section-heading">Section seven</h2>
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel incidunt veniam voluptates facilis odit reiciendis iste ex, quam consectetur nisi, corrupti aspernatur obcaecati dicta, amet quia voluptas dolorum nesciunt perspiciatis.</p>
       </div>
-      {% include /images/home-section-7/gardenerraking.svg class="gardenerraking" alt="" parallax="0.05" %}
+      {% include /images/home-section-7/gardenerraking.svg class="gardenerraking" alt="" %}
 
       {% include /images/home-section-7/plant_a.svg class="plant_A plant_A--one" alt="" parallax="0.15" %}
       {% include /images/home-section-7/plant_a.svg class="plant_A plant_A--two" alt="" parallax="0.1" %}

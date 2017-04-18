@@ -22,6 +22,13 @@
 @import 'slide-six'
 @import 'slide-seven'
 
+
+[type="button"] + p
+  display: none
+  @media screen and (min-width: $medium-screen)
+    display: block
+
+
 [parallax]
   position: absolute
 
@@ -34,6 +41,7 @@
 
 .section-subheading
   margin-top: $small-spacing
+
   @media screen and (min-width: $medium-screen)
     margin-top: 1.5 * $base-spacing
     margin-bottom: $small-spacing

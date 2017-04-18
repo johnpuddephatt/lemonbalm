@@ -21,18 +21,33 @@ $base-spacing: $base-line-height * $base-font-size;
 $small-spacing: $base-spacing / 2;
 $base-z-index: 0;
 
+
 // Colors
-$blue: #1565c0;
-$dark-gray: #333;
-$medium-gray: #999;
-$light-gray: #ddd;
+
+// Background colours
+$mine_shaft: #333333;
+$vivid_tangerine: #F79984;
+$blue_bayoux: #63757B;
+$watusi: #F0D1BC;
+$medium_aquamarine: #63C3AE;
+$salmon: #F1856B;
+
+
+
+$olivine: #8DB47A;
+$my_sin: #FAB12A;
+$light_grey: #AAAAAA;
+$white_smoke: #F7F6F5;
+$ochre: #C8732D;
+$breaker_bay: #53A492;
+$sugar_cane: #EDEEE2;
 
 // Font Colors
-$base-font-color: $dark-gray;
-$action-color: $blue;
+$base-font-color: $mine_shaft;
+$action-color: $blue-bayoux;
 
 // Border
-$base-border-color: $light-gray;
+$base-border-color: $blue_bayoux;
 $base-border: 1px solid $base-border-color;
 
 // Background Colors
