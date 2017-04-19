@@ -20,7 +20,7 @@ $perspective: 1px
       perspective: $perspective
       perspective-origin: 50% 50%
       scroll-behavior: smooth
-      transition: background-color 1000ms linear
+      transition: background-color 2 * $base-duration linear
       background-color: $vivid_tangerine
       svg
         display: none
@@ -68,7 +68,10 @@ $perspective: 1px
       &--one
         height: 100vh
       &--seven
-        height: (9/16 * 100) + vw
+        height: 100vh
+        .container
+          height: calc(100% - #{4 * $base-spacing})
+          transform-style: flat
 
     [parallax]
       position: absolute

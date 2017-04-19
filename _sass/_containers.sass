@@ -24,20 +24,24 @@ svg
   height: auto
 
 .section
-  color: white
+  color: $white_smoke
   height: 100vh
   position: relative
   overflow: hidden
-  padding: $base-spacing
-  @include grid-media($grid-landscape)
-    padding: 0
+
   &--one
     background-color: $vivid_tangerine
   &--two, &--six
     background-color: $blue_bayoux
-  &--three, &--seven
+  &--three
     background-color: $watusi
     color: $mine_shaft
+    .slide.container
+      @include grid-media($grid-landscape)
+        transform: translateX(-60%)
+        .fruitandveg
+          opacity: 0
+
   &--four
     background-color: $medium_aquamarine
   &--five
@@ -45,6 +49,11 @@ svg
   &--six
     .section-heading, .pullout-stat
       color: $sugar_cane
+  &--seven
+    background-color: $watusi
+    color: $mine_shaft
+    .container
+      height: calc(100% - #{4 * $base-spacing})
 
 .subsection
   display: none
@@ -77,10 +86,13 @@ svg
   display: flex
   flex-direction: column
   justify-content: center
+  transition: transform $base-duration
+  padding: $base-spacing
   @include grid-media($grid-landscape)
+    padding: 0
     flex-direction: row
-    justify-content: space-around
-    width: 85%
+    justify-content: space-between
+    width: 82.5%
     margin-left: auto
     margin-right: auto
 
@@ -88,7 +100,7 @@ svg
   position: relative
   align-self: center
   width: 100%
-  border: 2px dotted rgba(255,255,255,.15)
+  // border: 2px dotted rgba(255,255,255,.15)
 
 
   &--image
@@ -112,7 +124,7 @@ svg
 
     @include grid-media($grid-landscape)
       text-align: left
-      flex: 0 0 38%
+      flex: 0 0 40%
       order: initial
       height: auto
       margin-top: 0
@@ -120,17 +132,40 @@ svg
   &--centred
     text-align: center
     @include grid-media($grid-landscape)
-      @include grid-column(9)
+      @include grid-column(10)
       margin-left: auto
       margin-right: auto
 
+
+.sidepage-body
+  overflow-y: auto
+  &::-webkit-scrollbar
+    -webkit-appearance: none
+    width: $base-spacing
+    background-color: transparent
+    border-radius: 10px
+    border: 1px solid $vivid_tangerine
+  &::-webkit-scrollbar-thumb
+    border-radius: 10px
+    width: $base-spacing
+    background-color: $salmon
+    -webkit-box-shadow: 0 0 1px rgba(255, 255, 255, .5)
+
+.sidepage-title
+  font-size: modular-scale(2)
+
 footer
   background-color: $breaker_bay
-  padding: $base-spacing
+  padding: $base-spacing $small-spacing
   text-align: center
   position: relative
+  height: 4 * $base-spacing
   p
     margin-bottom: 0
     padding-bottom: 0
-    padding-top: 6 * $base-spacing
+    margin-top: $base-spacing
     color: #fff
+
+.faux-footer
+  background-color: $breaker_bay
+  height: $small-spacing

@@ -29,36 +29,25 @@ layout: default
 
   <div class="section section--three">
     <div class="container">
-      <!-- <div class="column column--centred">
-        <h2 class="section-heading">We get people gardening</h2>
-        <div class="col">
-          <h3 class="section-subheading">We run sessions</h3>
-          <p>Some information goes here, plus link through to seperate page with more info.</p>
-        </div>
-        <div class="col">
-          <h3 class="section-subheading">We create gardens</h3>
-          <p>Some information goes here, plus link through to seperate page with more info.</p>
-        </div>
-        <div class="col">
-          <h3 class="section-subheading">We train &amp; consult</h3>
-          <p>Some information goes here, plus link to seperate page with more info.</p>
-        </div>
-      </div>
-      {% include /images/home-section-3/fruitandveg-left.svg class="fruitandveg fruitandveg--left" parallax="-0.1" alt="" %}
-      {% include /images/home-section-3/fruitandveg-right.svg class="fruitandveg fruitandveg--right" parallax="-0.1" alt="" %} -->
       <div class="column column--image">
         {% include /images/home-section-3/fruitandveg.svg class="fruitandveg" parallax="-0.1" alt="" %}
         {% include /images/home-section-3/plantpots.svg class="plantpots" parallax="-0.1" alt="" %}
       </div>
-      <div class="column column--text">
+      <div class="column column--text xxx-seedling-links">
         <h2 class="section-heading">We get people gardening</h2>
-        <h3 type="button" class="section-subheading">We run sessions</h3>
+        <a class="seedling-link section-subheading" data-target="run-sessions">We run sessions</a>
         <p>Some information goes here, plus link through to seperate page with more info.</p>
-        <h3 type="button" class="section-subheading">We create gardens</h3>
+        <a class="seedling-link section-subheading" data-target="create-gardens">We create gardens</a>
         <p>Some information goes here, plus link through to seperate page with more info.</p>
-        <h3 type="button" class="section-subheading">We train &amp; consult</h3>
+        <a class="seedling-link section-subheading" data-target="train-advise">We train &amp; advise</a>
         <p>Some information goes here, plus link to seperate page with more info.</p>
+        <a class="button button--close" data-target="close">Close</a>
       </div>
+      <!-- {% include side-run-sessions.html %}
+      {% include side-create-gardens.html %}
+      {% include side-train-advise.html %} -->
+
+
     </div>
   </div>
 
@@ -121,26 +110,27 @@ layout: default
       <div class="column column--centred">
         <h2 class="section-heading">Get in touch for a free consultation</h2>
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel incidunt veniam voluptates facilis odit reiciendis iste ex, quam consectetur nisi, corrupti aspernatur obcaecati dicta, amet quia voluptas dolorum nesciunt perspiciatis.</p>
-        <a type="button">info@lemonbalm.org.uk</a>
-        <a type="button">07595 471 597</a>
+        <a href="mailto:isabel@lemonbalm.org.uk" class="seedling-link">Send us a message</a>
+        <p>(Or call us if you prefer. We’re on 07595 47I 597)</p>
       </div>
       {% include /images/home-section-7/gardenerraking.svg class="gardenerraking" alt="" %}
 
-      {% include /images/home-section-7/plant_a.svg class="plant_A plant_A--one" alt="" parallax="0.15" %}
-      {% include /images/home-section-7/plant_a.svg class="plant_A plant_A--two" alt="" parallax="0.1" %}
-      {% include /images/home-section-7/plant_a.svg class="plant_A plant_A--three" alt="" parallax="0.25" %}
+      {% include /images/home-section-7/plant_a.svg class="plant_A plant_A--one" alt="" parallax="-0.15" %}
+      {% include /images/home-section-7/plant_a.svg class="plant_A plant_A--two" alt="" parallax="-0.1" %}
+      {% include /images/home-section-7/plant_a.svg class="plant_A plant_A--three" alt="" parallax="-0.25" %}
 
-      {% include /images/home-section-7/plant_b.svg class="plant_B plant_B--one" alt="" parallax="0.05" %}
-      {% include /images/home-section-7/plant_b.svg class="plant_B plant_B--two" alt="" parallax="0.1" %}
+      {% include /images/home-section-7/plant_b.svg class="plant_B plant_B--one" alt="" parallax="-0.05" %}
+      {% include /images/home-section-7/plant_b.svg class="plant_B plant_B--two" alt="" parallax="-0.1" %}
 
-      {% include /images/home-section-7/plant_c.svg class="plant_C plant_C--one" alt="" parallax="0.05" %}
-      {% include /images/home-section-7/plant_c.svg class="plant_C plant_C--two" alt="" parallax="0.25" %}
-      {% include /images/home-section-7/plant_c.svg class="plant_C plant_C--three" alt="" parallax="0.15" %}
-
+      {% include /images/home-section-7/plant_c.svg class="plant_C plant_C--one" alt="" parallax="-0.05" %}
+      {% include /images/home-section-7/plant_c.svg class="plant_C plant_C--two" alt="" parallax="-0.25" %}
+      {% include /images/home-section-7/plant_c.svg class="plant_C plant_C--three" alt="" parallax="-0.15" %}
     </div>
+    <footer>
+      <p>Lemon Balm Horticultural Therapy is a Community Interest Company, registered company number 09740573.</p>
+    </footer>
   </div>
+  <div class="faux-footer"></div>
 
-  <footer>
-    <p>Lemon Balm Horticultural Therapy is a Community Interest Company, registered company number 09740573.</p>
-  </footer>
+
 

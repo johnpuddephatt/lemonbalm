@@ -4,8 +4,6 @@
   color: $ochre;
   display: inline-block;
   min-width: 65%;
-  font-family: $base-font-family;
-  font-weight: 700;
   margin-bottom: $small-spacing;
   padding: 0 $base-spacing;
   border-radius: $base-spacing;
@@ -24,21 +22,6 @@
     }
   }
 
-
-  &:after {
-    width: 1.8 * $base-spacing;
-    height: 1.8 * $base-spacing;
-    content: '';
-    display: block;
-    border: .2rem solid $ochre;
-    border-radius: 50%;
-    position: absolute;
-    border-left-color: transparent;
-    border-top-color: transparent;
-    border-bottom-color: transparent;
-    right: .2 * $base-spacing;
-    top: .1 * $base-spacing;
-  }
 
   &:hover,
   &:focus {
