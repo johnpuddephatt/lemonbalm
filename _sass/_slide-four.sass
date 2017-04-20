@@ -24,6 +24,13 @@
   bottom: 5%
   transform: translateX(-50%)
 
+@include grid-media($grid-landscape)
+  @media screen and (min-width: $medium-screen)
+    .leaf
+      height: 50%
+    .yogi
+      height: 65%
+      left: 55%
 
 @media screen and (min-width: $large-screen) and (orientation: landscape)
   @supports ((perspective: 1px) and (not (-webkit-overflow-scrolling: touch)))

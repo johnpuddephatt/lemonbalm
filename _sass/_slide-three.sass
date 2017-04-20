@@ -1,15 +1,26 @@
 .section--three
 
-  .seedling-link + p
+  .button--label + p
     display: none
 
   .fruitandveg
     height: 100%
     display: none
 
-  .plantpots
+
+  svg.plantpots[parallax]
     bottom: 0
     height: 100%
+    @include grid-media($grid-landscape)
+      @media screen and (min-width: $large-screen)
+        display: none
+      @media screen and (min-width: $xl-screen)
+        display: block
+
+  @include grid-media($grid-landscape)
+    svg.plantpots[parallax]
+      height: 90%
+      bottom: 2.5%
 
   .seedling-target
     position: absolute
@@ -34,15 +45,8 @@
 
 
 .button--close
-  border: .2rem solid $salmon
-  color: $salmon
-  border-radius: $small-spacing
-  line-height: $base-spacing
-  padding: 0 $small-spacing
-  cursor: pointer
-  display: inline-block
-  position: absolute
   display: none
+  position: absolute
   .slide &
     display: block
 
@@ -52,12 +56,12 @@
 
     .section--three
 
-      .seedling-link + p
+      .button--label + p
         display: block
 
-      .plantpots
-        left: 191%
-        bottom: -12.5%
+      svg.plantpots[parallax]
+        left: 189%
+        bottom: -12%
         height: 12 * $base-spacing
 
       .fruitandveg

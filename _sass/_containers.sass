@@ -7,7 +7,7 @@ $grid-landscape: (columns: 12, gutter: 2 * $base-spacing, media: "(orientation: 
 
 html
   font-size: 56.25%
-  @media screen and (min-width: $large-screen)
+  @media screen and (min-width: $medium-screen)
     font-size: 62.5%
   @media screen and (min-width: $xl-screen)
     font-size: 68.75%
@@ -26,6 +26,7 @@ svg
 .section
   color: $white_smoke
   height: 100vh
+  min-height: calc(9/16 * 100vw)
   position: relative
   overflow: hidden
 
@@ -53,12 +54,15 @@ svg
     background-color: $watusi
     color: $mine_shaft
     .container
-      height: calc(100% - #{4 * $base-spacing})
+      height: calc(100% - #{3 * $base-spacing})
+      @media screen and (min-width: $medium-screen)
+        height: calc(100% - #{5 * $base-spacing})
 
 .subsection
   display: none
   @include grid-media($grid-landscape)
-    display: block
+    @media screen and (min-width: $medium-screen)
+      display: block
 
 .col
   width: 30%
@@ -85,16 +89,24 @@ svg
   height: 100%
   display: flex
   flex-direction: column
-  justify-content: center
+  justify-content: space-around
   transition: transform $base-duration
   padding: $base-spacing
+  @media screen and (min-width: $medium-screen)
+    padding: 2 * $base-spacing
+  @media screen and (min-width: $large-screen)
+    padding: 3 * $base-spacing
   @include grid-media($grid-landscape)
-    padding: 0
+
     flex-direction: row
     justify-content: space-between
-    width: 82.5%
     margin-left: auto
     margin-right: auto
+    @media screen and (min-width: $medium-screen)
+      justify-content: space-around
+      width: 82.5%
+      padding: 0
+
 
 .column
   position: relative
@@ -104,37 +116,55 @@ svg
 
 
   &--image
-    flex: 1 1 50%
-    margin-bottom: $base-spacing
+    flex: 0 1 60%
     order: 1
+    margin-bottom: $base-spacing
     @include grid-media($grid-landscape)
       flex: 0 0 58%
       height: 100%
       margin-bottom: 0
       order: initial
       position: relative
+      flex: 0 0 47.5%
+      @media screen and (min-width: $medium-screen)
+        flex: 0 0 58%
 
   &--text
     z-index: 999
-    flex: 1 0 auto
+    flex: 0 0 auto
     text-align: center
     order: 2
     p:last-child
       margin-bottom: 0
+    @media screen and (min-width: $medium-screen)
+      width: 85%
 
     @include grid-media($grid-landscape)
+      width: auto
       text-align: left
-      flex: 0 0 40%
+      flex: 0 0 47.5%
       order: initial
       height: auto
       margin-top: 0
       margin-bottom: 0
-  &--centred
+      @media screen and (min-width: $medium-screen)
+        flex: 0 0 40%
+  &--welcome
     text-align: center
     @include grid-media($grid-landscape)
-      @include grid-column(10)
-      margin-left: auto
-      margin-right: auto
+      @media screen and (min-width: $large-screen)
+        @include grid-column(10)
+        margin-left: auto
+        margin-right: auto
+  &--contact
+    text-align: center
+    @media screen and (min-width: $medium-screen)
+      width: 80%
+    @include grid-media($grid-landscape)
+      @media screen and (min-width: $large-screen)
+        width: 40%
+        margin-left: auto
+        margin-right: auto
 
 
 .sidepage-body
@@ -156,16 +186,17 @@ svg
 
 footer
   background-color: $breaker_bay
-  padding: $base-spacing $small-spacing
   text-align: center
   position: relative
-  height: 4 * $base-spacing
+  height: 3 * $base-spacing
+  display: flex
+  align-items: center
+  justify-content: center
+  font-size: modular-scale(-1)
+  @media screen and (min-width: $medium-screen)
+    height: 5 * $base-spacing
+    font-size: modular-scale(0)
   p
     margin-bottom: 0
     padding-bottom: 0
-    margin-top: $base-spacing
     color: #fff
-
-.faux-footer
-  background-color: $breaker_bay
-  height: $small-spacing

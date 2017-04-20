@@ -39,11 +39,9 @@
         var seedlings = document.querySelector('.seedling-links');
 
         seedlings.addEventListener('click', function(e) {
-          console.log(e.target.dataset.target);
           if(e.target.dataset.target) {
             e.preventDefault();
             if (e.target.dataset.target == 'close') {
-              console.log('got this far');
               seedlings.parentNode.classList.remove('slide');
             }
             else {

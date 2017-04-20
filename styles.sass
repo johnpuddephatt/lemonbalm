@@ -12,38 +12,21 @@
 
 @import 'containers'
 
-@import 'parallax'
 
-@import 'slide-one'
-@import 'slide-two'
-@import 'slide-three'
-@import 'slide-four'
-@import 'slide-five'
-@import 'slide-six'
-@import 'slide-seven'
-
-
-[type="button"] + p
-  display: none
-  @media screen and (min-width: $medium-screen)
-    display: block
-
-.seedling-link
+.button
   font-family: $heading-font-family
   font-size: modular-scale(1)
   -webkit-font-smoothing: antialiased
   -moz-osx-font-smoothing: grayscale
   background-color: $sugar_cane
   height: 2 * $base-spacing
-  padding: 0 2 * $base-spacing 0 $base-spacing
+  padding: 0 $base-spacing
   display: inline-block
   clear: both
-  border-radius: 2 * $base-spacing 100% 100% 2 * $base-spacing
+  margin-top: $small-spacing
+  border-radius: 2 * $base-spacing
   line-height: 2 * $base-spacing
   position: relative
-  margin-bottom: $small-spacing
-  margin-left: -$base-spacing
-  margin-right: -2 * $base-spacing
   color: $blue_bayoux
   transition: $base-duration
   cursor: pointer
@@ -51,6 +34,15 @@
   width: 100%
   @include grid-media($grid-landscape)
     margin-bottom: $base-spacing
+
+
+.button--label
+  padding: 0 2 * $base-spacing 0 $base-spacing
+  border-radius: 2 * $base-spacing 100% 100% 2 * $base-spacing
+  margin-bottom: $small-spacing
+  margin-left: -$base-spacing
+  margin-right: -2 * $base-spacing
+  @include grid-media($grid-landscape)
     width: auto
     min-width: 70%
     padding: 0 4 * $base-spacing 0 $base-spacing
@@ -84,7 +76,7 @@
 
   @media screen and (min-width: $medium-screen)
     margin-top: $base-spacing
-    margin-bottom: $small-spacing
+    margin-bottom: $small-spacing/2
 
 .pullout-stat-heading
   font-size: modular-scale(9)
@@ -97,3 +89,15 @@
 .pullout-stat-body
   font-size: modular-scale(1)
   line-height: $heading-line-height
+
+
+
+@import 'parallax'
+
+@import 'slide-one'
+@import 'slide-two'
+@import 'slide-three'
+@import 'slide-four'
+@import 'slide-five'
+@import 'slide-six'
+@import 'slide-seven'

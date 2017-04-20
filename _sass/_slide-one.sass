@@ -8,9 +8,13 @@
 
 
 .lemonbalm-logo
-  height: 3 * $base-spacing
   width: auto
-  margin: 0 auto -3 * $base-spacing
+  height: 2.5 * $base-spacing
+  margin: 0 auto -1.5 * $base-spacing
+  @media screen and (min-width: $medium-screen)
+    height: 3 * $base-spacing
+    margin: 0 auto -3 * $base-spacing
+
 
 .garland
   position: absolute
@@ -22,14 +26,22 @@
   &--lower
     bottom: -5vh
 
+@include grid-media($grid-landscape)
+  .garland
+    width: 110vw
+    left: 50%
+    &--upper
+      top: auto
+      bottom: 60%
+    &--lower
+      top: auto
+      bottom: -10%
+
 @media screen and (min-width: $large-screen) and (orientation: landscape)
   @supports ((perspective: 1px) and (not (-webkit-overflow-scrolling: touch)))
+
     .garland
-      width: 110vw
-      left: 50%
       &--upper
-        top: auto
         bottom: 52.5%
       &--lower
-        top: auto
         bottom: (-9/16 * 10) + vw

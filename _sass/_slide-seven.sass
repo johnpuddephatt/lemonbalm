@@ -3,7 +3,9 @@
 
   .plant_A
     width: 15vw
-    bottom: 3 * $base-spacing
+    bottom: 2 * $base-spacing
+    @media screen and (min-width: $medium-screen)
+      bottom: 3 * $base-spacing
     &--one
       left: 4%
     &--two
@@ -15,7 +17,9 @@
 
   .plant_B
     width: 15vw
-    bottom: 3 * $base-spacing
+    bottom: 2 * $base-spacing
+    @media screen and (min-width: $medium-screen)
+      bottom: 3 * $base-spacing
     &--one
       left: 21%
     &--two
@@ -23,7 +27,9 @@
       width: 15vw
 
   .plant_C
-    bottom: 3 * $base-spacing
+    bottom: 2 * $base-spacing
+    @media screen and (min-width: $medium-screen)
+      bottom: 3 * $base-spacing
     width: 15vw
     &--one
       left: 35%
@@ -36,6 +42,14 @@
   .gardenerraking
     display: none
 
+
+@include grid-media($grid-landscape)
+  .section--seven
+    .plant_A, .plant_B, .plant_C
+      width: 7.5vw
+      @media screen and (max-width: $medium-screen)
+        display: none  
+
 @media screen and (min-width: $large-screen) and (orientation: landscape)
   @supports ((perspective: 1px) and (not (-webkit-overflow-scrolling: touch)))
 
@@ -44,50 +58,46 @@
 
       .gardenerraking
         display: block
-        width: 25%
-        left: 4vw
-        bottom: 3.9 * $base-spacing
+        position: absolute
+        height: 90%
+        left: -30vw
+        bottom: -2px
         top: auto
 
       .plant_A
         width: 6vw
-        bottom: -10%
+        bottom: -22%
         &--one
           left: 32.5%
         &--two
           left: 54%
           width: 7vw
-          bottom: -9%
         &--three
           left: 72%
           display: block
-          bottom: -10%
+          bottom: -25%
 
       .plant_B
         width: 6vw
         &--one
           left: 47.5%
-          bottom: 0%
+          bottom: -11%
         &--two
           left: 77%
           width: 7.5vw
-          bottom: -1%
+          bottom: -16%
 
       .plant_C
         &--one
           width: 4.5vw
           left: 27.5%
-          bottom: -2%
+          bottom: -14%
         &--two
           left: 39%
-          bottom: -11%
+          bottom: -26%
           width: 7vw
           display: block
         &--three
           left: 63%
           width: 6vw
-          bottom: -8%
-
-      .seedling-link
-        margin-top: $base-spacing
-        min-width: 40%
+          bottom: -20%

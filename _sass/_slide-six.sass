@@ -13,6 +13,19 @@
   transform: translateX(-50%)
 
 
+@include grid-media($grid-landscape)
+  @media screen and (min-width: $medium-screen)
+    .planters
+      width: 120%
+      height: auto
+      bottom: 10%
+      left: 60%
+    .potplant
+      top: 35%
+      height: 25%
+      left: 55%
+
+
 @media screen and (min-width: $large-screen) and (orientation: landscape)
   @supports ((perspective: 1px) and (not (-webkit-overflow-scrolling: touch)))
 
