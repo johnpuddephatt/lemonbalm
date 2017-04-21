@@ -1,5 +1,5 @@
 <svg class="{{ include.class }}" alt="{{ include.alt }}" parallax={{ include.parallax }} version="1.1"
-	 xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="229.8px" height="131.8px" viewBox="0 0 229.8 131.8" enable-background="new 0 0 229.8 131.8"
+	 xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 229.8 131.8" enable-background="new 0 0 229.8 131.8"
 	 xml:space="preserve">
 	<path fill="#FFB01E" d="M123.6,126.2c-66.8,0-121,43.1-121-111C2.7,15.2-5.6,0,6.8,0c5.6,0,56.2,0,109.6,0"/>
 	<path fill="#FFB01E" d="M106.2,126.2c66.8,0,121,43.1,121-111c0,0,8.2-15.2-4.2-15.2c-5.6,0-56.2,0-109.6,0"/>

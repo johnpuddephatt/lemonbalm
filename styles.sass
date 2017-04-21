@@ -37,29 +37,26 @@
 
 
 .button--label
-  padding: 0 2 * $base-spacing 0 $base-spacing
-  border-radius: 2 * $base-spacing 100% 100% 2 * $base-spacing
-  margin-bottom: $small-spacing
-  margin-left: -$base-spacing
-  margin-right: -2 * $base-spacing
   @include grid-media($grid-landscape)
+    border-radius: 2 * $base-spacing 100% 100% 2 * $base-spacing
+    margin-bottom: $small-spacing
     width: auto
     min-width: 70%
     padding: 0 4 * $base-spacing 0 $base-spacing
     margin-left: -$base-spacing
     margin-right: -4 * $base-spacing
-  &::after
-    content: ''
-    height: $small-spacing
-    width: $small-spacing
-    display: block
-    border-radius: 50%
-    background-color: $watusi
-    position: absolute
-    top: $base-spacing * (3/4)
-    right: 3.25 * $base-spacing
-  &:hover
-    transform: translateX($small-spacing)
+    &::after
+      content: ''
+      height: $small-spacing
+      width: $small-spacing
+      display: block
+      border-radius: 50%
+      background-color: $watusi
+      position: absolute
+      top: $base-spacing * (3/4)
+      right: 3.25 * $base-spacing
+    &:hover
+      transform: translateX($small-spacing)
 
 [parallax]
   position: absolute
