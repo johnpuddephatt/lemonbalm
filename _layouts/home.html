@@ -33,7 +33,7 @@ layout: default
         {% include /images/home-section-3/fruitandveg.svg class="fruitandveg" parallax="-0.1" alt="" %}
         {% include /images/home-section-3/plantpots.svg class="plantpots" parallax="-0.1" alt="" %}
       </div>
-      <div class="column column--text xyz-seedling-links">
+      <div class="column column--text xyz-has-subpage-links">
         <h2 class="section-heading">We get people gardening</h2>
         <a class="button button--label" data-target="run-sessions">We run sessions</a>
         <p>We deliver weekly gardening sessions tailored to the needs of the group, working towards outcomes agreed with you.</p>
@@ -107,11 +107,35 @@ layout: default
 
   <div class="section section--seven">
     <div class="container">
-      <div class="column column--contact">
-        <h2 class="section-heading">Get in touch now for a free consultation</h2>
-        <p>If you’re interested in what we do and want to talk through how we could help you, then get in touch. We offer free visits and initial consultations, as well as a discounted trial rate.</p>
-        <a href="mailto:isabel@lemonbalm.org.uk" class="button">Send us a message</a>
+      <div class="column column--contact has-subpage-links">
+        <!-- <h2 class="section-heading">Get in touch now for a free consultation</h2>
+        <p>If you’re interested in what we do and want to talk through how we could help you, then get in touch. We offer free visits and initial consultations, as well as a discounted trial rate.</p> -->
+        <div class="contact--intro">
+          <h2 class="section-heading">Drop us a line to find out more</h2>
+          <p>We work with all kinds of people – private care homes, community groups, PTAs and schools, allotment associations, community centres, charities and individuals. We also provide consultations to charitable and community groups to support fundraising to make projects happen.</p>
+          <a href="mailto:isabel@lemonbalm.org.uk" class="button" data-target="subpage-contact">Get in touch with us now</a>
+        </div>
+        <div class="contact--form">
+          <h3 class="section-heading">Contact us</h3>
+          <p>You can email us at <a href="mailto:isabel@lemonbalm.org.uk">isabel@lemonbalm.org.uk</a>, call us on 07595 471 597, or use the form below.</p>
+          <form action="//formspree.io/john@jdp.org.uk" method="POST">
+            <label for="name">Name
+              <input type="text" name="name" />
+            </label>
+            <label for="name">Email
+              <input type="email" name="_replyto" />
+            </label>
+            <label for="name">Message
+              <textarea type="text" name="message"></textarea>
+            </label>
+            <input type="submit" value="Submit">
+            <button class="button" data-target="close">Cancel</button>
+
+          </form>
+        </div>
+
       </div>
+
       {% include /images/home-section-7/gardenerraking.svg class="gardenerraking" alt="" %}
 
       {% include /images/home-section-7/plant_a.svg class="plant_A plant_A--one" alt="" parallax="-0.15" %}
@@ -124,6 +148,7 @@ layout: default
       {% include /images/home-section-7/plant_c.svg class="plant_C plant_C--one" alt="" parallax="-0.05" %}
       {% include /images/home-section-7/plant_c.svg class="plant_C plant_C--two" alt="" parallax="-0.25" %}
       {% include /images/home-section-7/plant_c.svg class="plant_C plant_C--three" alt="" parallax="-0.15" %}
+
     </div>
     <footer>
       <p>Lemon Balm Horticultural Therapy is a Community Interest Company, registered company number 09740573.</p>

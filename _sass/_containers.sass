@@ -56,6 +56,69 @@ svg
       height: calc(100% - #{3 * $base-spacing})
       @media screen and (min-width: $medium-screen)
         height: calc(100% - #{5 * $base-spacing})
+    .contact--intro
+      transition: $base-duration
+    .contact--form
+      opacity: 0
+      position: absolute
+      top: 0
+      pointer-events: none
+      left: 0
+      width: 100%
+      transform: translateY(2 * $base-spacing)
+      transition: $base-duration
+      .section-heading
+        margin-bottom: $small-spacing
+      #{$all-buttons}
+        float: right
+        width: 36%
+        clear: none
+        margin: 0
+        margin-top: $small-spacing
+        margin-left: 3%
+
+      > h3, > p
+        margin-left: 25%
+        text-align: left
+      label
+        line-height: 2 * $base-spacing
+        text-align: right
+        #{$all-text-inputs}, textarea
+          float: right
+          width: 75%
+          margin-left: $small-spacing
+          border: none
+          background-color: $sugar_cane
+          border-radius: $base-spacing
+      .status
+        position: absolute
+        z-index: 999
+        top: 0
+        bottom: 0
+        right: 0
+        left: 0
+        border-radius: $small-spacing
+        background-color: white
+        display: flex
+        align-items: center
+        justify-content: center
+        flex-direction: column
+        animation: statusIn 2 * $base-duration forwards
+    .slide .contact--form
+      transform: translateY(0)
+      opacity: 1
+      pointer-events: all
+    .slide .contact--intro
+      transform: translateY(-2 * $base-spacing)
+      opacity: 0
+
+@keyframes statusIn
+  0%
+    opacity: 0
+    transform: translateY($base-spacing)
+  100%
+    opacity: 1
+    transform: translateY(0)
 
 .subsection
   display: none
@@ -159,11 +222,11 @@ svg
     text-align: center
     @media screen and (min-width: $medium-screen)
       width: 80%
+      margin-left: auto
+      margin-right: auto
     @include grid-media($grid-landscape)
       @media screen and (min-width: $large-screen)
-        width: 40%
-        margin-left: auto
-        margin-right: auto
+        width: 50%
 
 
 .sidepage-body
