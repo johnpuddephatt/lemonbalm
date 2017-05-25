@@ -94,9 +94,9 @@ svg
         position: absolute
         z-index: 999
         top: 0
-        bottom: 0
-        right: 0
-        left: 0
+        bottom: -$small-spacing/4
+        right: -$small-spacing/4
+        left: -$small-spacing/4
         border-radius: $small-spacing
         background-color: white
         display: flex
@@ -125,6 +125,8 @@ svg
   @include grid-media($grid-landscape)
     @media screen and (min-width: $medium-screen)
       display: block
+    @media screen and (min-width: $large-screen)
+      margin-top: $small-spacing
 
 .col
   width: 30%
