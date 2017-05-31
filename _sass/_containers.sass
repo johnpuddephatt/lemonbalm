@@ -50,46 +50,56 @@ svg
     .section-heading, .pullout-stat
       color: $sugar_cane
   &--seven
-    background-color: $watusi
-    color: $mine_shaft
+    background-color: $puerto_rico
     .container
       height: calc(100% - #{3 * $base-spacing})
       @media screen and (min-width: $medium-screen)
-        height: calc(100% - #{4 * $base-spacing})
+        height: calc(100% - #{5 * $base-spacing})
     .contact--intro
       transition: $base-duration
+      .button
+        margin-top: $base-spacing
     .contact--form
       opacity: 0
+      max-width: 80%
       position: absolute
       top: 0
       pointer-events: none
-      left: 0
-      width: 100%
+      left: 10%
       transform: translateY(2 * $base-spacing)
       transition: $base-duration
       .section-heading
         margin-bottom: $small-spacing
+
+      .button-container
+        text-align: center
       #{$all-buttons}
-        float: right
-        width: 36%
         clear: none
+        display: inline-block
+        min-width: inherit
         margin: 0
         margin-top: $small-spacing
-        margin-left: 3%
-
-      > h3, > p
-        margin-left: 25%
-        text-align: left
+        max-width: 45%
+        font-size: modular-scale(1)
+      > p
+        margin-bottom: $base-spacing
+      div
+        position: relative
       label
-        line-height: 2 * $base-spacing
-        text-align: right
-        #{$all-text-inputs}, textarea
-          float: right
-          width: 75%
-          margin-left: $small-spacing
-          border: none
-          background-color: $sugar_cane
-          border-radius: $base-spacing
+        line-height: 1.5 * $base-spacing
+        position: absolute
+        color: $blue_bayoux
+        left: $base-spacing
+        top: 0
+        text-align: left
+        width: 20%
+
+      #{$all-text-inputs}, textarea
+        padding-left: 30%
+        margin: $small-spacing auto
+        border: none
+        background-color: $sugar_cane
+        border-radius: $base-spacing
       .status
         position: absolute
         z-index: 999
@@ -249,19 +259,52 @@ svg
   font-size: modular-scale(2)
 
 footer
-  background-color: $breaker_bay
-  text-align: center
+  background-color: $blue_bayoux
+  text-align: left
   position: relative
-  height: 3 * $base-spacing
-  display: flex
-  align-items: center
-  justify-content: center
-  font-size: modular-scale(-1)
-  @media screen and (min-width: $medium-screen)
-    height: 4 * $base-spacing
-    font-size: modular-scale(0)
+  .footer-inner
+    display: flex
+    width: 90%
+    margin: 0 auto
+    flex-direction: row
+    align-items: center
+    justify-content: center
+    height: 3 * $base-spacing
+    font-size: modular-scale(-1)
+    @media screen and (min-width: $medium-screen)
+      width: 45%
+      height: 5 * $base-spacing
+      font-size: modular-scale(0)
   p
     margin-bottom: 0
     padding-bottom: 0
     color: #fff
+    flex: 1 1 auto
     padding: 0 $small-spacing/2
+    font-size: modular-scale(-1)
+
+
+
+.social-icons
+  float: left
+  flex: 0 0 auto
+  margin-right: $small-spacing
+  li
+    list-style-type: none
+    float: left
+    align-items: baseline
+
+    a
+      width: 1.25 * $base-spacing
+      height: 1.25 * $base-spacing
+      margin: 0 $small-spacing/3
+      border-radius: 50%
+      display: block
+      padding: .4 * $small-spacing
+      background-color: white
+      &.social-instagram
+        padding: .55 * $small-spacing
+
+      svg
+        fill: $blue_bayoux
+

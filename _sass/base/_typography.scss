@@ -22,10 +22,17 @@ h6 {
 
 p {
   margin: 0 0 $small-spacing;
+  a {
+    border-bottom: 2px solid rgba(255,255,255,0.6);
+    color: inherit;
+    &:hover {
+      border-bottom-color: white;
+      color: inherit;
+    }
+  }
 }
 
 a {
-  color: $action-color;
   text-decoration: none;
   transition: color $base-duration $base-timing;
 

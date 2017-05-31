@@ -119,17 +119,22 @@ layout: default
           <h3 class="section-heading">Contact us</h3>
           <p>You can email us at <a href="mailto:isabel@lemonbalm.org.uk">isabel@lemonbalm.org.uk</a>, call us on 07595 471 597, or use the form below.</p>
           <form action="//formspree.io/john@jdp.org.uk" method="POST">
-            <label for="name">Name
+            <div>
+              <label for="name">Name:</label>
               <input type="text" name="name" />
-            </label>
-            <label for="name">Email
+            </div>
+            <div>
+              <label for="name">Email:</label>
               <input type="email" name="_replyto" />
-            </label>
-            <label for="name">Message
+            </div>
+            <div>
+              <label for="name">Message:</label>
               <textarea type="text" name="message"></textarea>
-            </label>
-            <input class="button" type="submit" value="Submit">
-            <button class="button" data-target="close">Cancel</button>
+            </div>
+            <div class="button-container">
+              <button class="button" data-target="close">Cancel</button>
+              <input class="button" type="submit" value="Submit">
+            </div>
 
           </form>
         </div>
@@ -138,7 +143,7 @@ layout: default
 
       {% include /images/home-section-7/gardenerraking.svg class="gardenerraking" alt="" %}
 
-      {% include /images/home-section-7/plant_a.svg class="plant_A plant_A--one" alt="" parallax="-0.15" %}
+      <!-- {% include /images/home-section-7/plant_a.svg class="plant_A plant_A--one" alt="" parallax="-0.15" %}
       {% include /images/home-section-7/plant_a.svg class="plant_A plant_A--two" alt="" parallax="-0.1" %}
       {% include /images/home-section-7/plant_a.svg class="plant_A plant_A--three" alt="" parallax="-0.25" %}
 
@@ -147,11 +152,20 @@ layout: default
 
       {% include /images/home-section-7/plant_c.svg class="plant_C plant_C--one" alt="" parallax="-0.05" %}
       {% include /images/home-section-7/plant_c.svg class="plant_C plant_C--two" alt="" parallax="-0.25" %}
-      {% include /images/home-section-7/plant_c.svg class="plant_C plant_C--three" alt="" parallax="-0.15" %}
+      {% include /images/home-section-7/plant_c.svg class="plant_C plant_C--three" alt="" parallax="-0.15" %} -->
+
+      {% include /images/home-section-7/plants.svg class="plants" alt="" parallax="-0.15" %}
+      {% include /images/home-section-7/wheelbarrow.svg class="wheelbarrow" alt="" %}
 
     </div>
     <footer>
-      <p>Lemon Balm Horticultural Therapy is a Community Interest Company, registered company number 09740573.</p>
+      <div class="footer-inner">
+        <ul class="social-icons">
+          <li><a href="https://www.facebook.com/lemonbalmth/" class="social-facebook">{% include /images/facebook.svg %}</a></li>
+          <li><a href="" class="social-instagram">{% include /images/instagram.svg %}</a></li>
+        </ul>
+        <p>Lemon Balm Horticultural Therapy is a Community Interest Company, registered company number 09740573.</p>
+      </div>
     </footer>
   </div>
 

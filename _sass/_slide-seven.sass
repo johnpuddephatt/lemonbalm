@@ -1,6 +1,16 @@
 .section--seven
   overflow: hidden
 
+  .wheelbarrow
+    display: none
+
+  .plants
+    width: 150vw
+    bottom: 1.5 * $base-spacing
+    left: 0%
+    @media screen and (min-width: $medium-screen)
+      bottom: 2 * $base-spacing
+
   .plant_A
     width: 15vw
     bottom: 2 * $base-spacing
@@ -63,11 +73,25 @@
       .gardenerraking
         display: block
         position: absolute
-        height: 90%
-        left: 0vw
+        height: 80%
+        left: -2.5vw
         bottom: -2px
         top: auto
         width: auto
+
+      .wheelbarrow
+        display: block
+        position: absolute
+        height: 30%
+        left: 80%
+        bottom: 0
+        top: auto
+        width: auto
+
+      .plants
+        bottom: -34%
+        width: 100vw
+        left: 60%
 
       .plant_A
         width: 6vw
