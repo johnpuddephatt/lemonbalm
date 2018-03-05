@@ -1,0 +1,26 @@
+---
+layout: page
+---
+
+    {{ content }}
+
+    {% for product in site.products %}
+
+      <h2>{{ product.title }}</h2>
+      {{ product.content }}
+      <form action="/" method="POST">
+        <script
+          src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+          data-key="{{ site.stripe_public_key }}"
+          data-amount="{{ product.price | times: 10 }}"
+          data-name="{{ product.title }}"
+          data-description="{{ product.description }}"
+          data-image="{{ product.image | default: site.icon }}"
+          data-locale="auto"
+          data-billing-address="true"
+          data-shipping-address="{{ product.shippable }}"
+          data-currency="gbp">
+        </script>
+      </form>
+
+    {% endfor %}

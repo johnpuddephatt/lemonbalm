@@ -1,8 +1,45 @@
+
+
+.js-loading svg.garland g
+  opacity: 0
+  transition: none
+
+
+.js-loading svg.garland g.garland-leaf path
+  opacity: 0
+  transition: none
+
+
+@for $i from 1 through 100
+  svg.garland g:not(.garland-leaf):nth-child(#{$i}n)
+    transition-delay: $i * 50ms
+
+
+@for $i from 1 through 30
+  svg.garland g.garland-leaf path:nth-child(#{$i}n)
+    transition-delay: 500ms + ($i * 100ms)
+
+
+svg.garland g
+  opacity: 1
+  transition: opacity 1s cubic-bezier(0.27, 0.09, 0.4, 0.88)
+
+
+svg.garland g.garland-leaf path
+  opacity: 1
+  transition: opacity 1s cubic-bezier(0.27, 0.09, 0.4, 0.88)
+
+
 .homepage-title
   text-transform: lowercase
   font-size: modular-scale(3)
   margin-top: 0
   margin-bottom: 0
+  transition: opacity 1.5s 0s cubic-bezier(0.27, 0.09, 0.4, 0.88), transform 1.5s 0s cubic-bezier(0.27, 0.09, 0.4, 0.88)
+  .js-loading &
+    transform: translateY(-$base-spacing)
+    opacity: 0
+    transition: none
   @media screen and (min-width: $medium-screen)
     font-size: modular-scale(5)
 
@@ -11,6 +48,11 @@
   width: auto
   height: 2.5 * $base-spacing
   margin: 0 auto -1.5 * $base-spacing
+  transition: opacity 1.5s .5s cubic-bezier(0.27, 0.09, 0.4, 0.88), transform 1.5s .5s cubic-bezier(0.27, 0.09, 0.4, 0.88)
+  .js-loading &
+    transform: translateY($base-spacing)
+    opacity: 0
+    transition: none
   @media screen and (min-width: $medium-screen)
     height: 3 * $base-spacing
     margin: 0 auto -3 * $base-spacing
@@ -20,11 +62,23 @@
   position: absolute
   left: 100%
   width: 275vw
-  transform: translateX(-50%)
+  transform: translate(-50%,0)
+  max-height: 70%
+  transition: opacity 1s cubic-bezier(0.27, 0.09, 0.4, 0.88), transform 1s cubic-bezier(0.27, 0.09, 0.4, 0.88)
   &--upper
     top: -15vh
+    .js-loading &
+      transform: translate(-50%,-$base-spacing)
+      opacity: 0
+      transition: none
+
   &--lower
     bottom: -5vh
+    .js-loading &
+      transform: translate(-50%,$base-spacing)
+      opacity: 0
+      transition: none
+
 
 @include grid-media($grid-landscape)
   .garland

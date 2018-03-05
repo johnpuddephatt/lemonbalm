@@ -1,0 +1,41 @@
+.shop
+
+.snip-steps
+  display: flex
+  flex-direction: row
+  justify-content: space-around
+  padding-bottom: $small-spacing
+  margin-bottom: $base-spacing
+  border-bottom: 1px solid
+  .snip-step__item
+    line-height: 2 * $base-spacing
+    padding: 0 $small-spacing
+    font-size: modular-scale(-1)
+  .snip-step__label
+    margin-bottom: 0
+  .js-active
+    background-color: $watusi
+    border-radius: $base-spacing
+
+.snip-cols
+  display: flex
+  flex-direction: row
+  width: 100%
+  .snip-col
+    margin-right: $base-spacing
+    flex: 1 1 50%
+
+    &:last-child
+      margin-right: 0
+
+.snip-form__help
+  float: right
+
+
+
+.snip-quantity-trigger__btn
+  width: $base-spacing
+  height: $base-spacing
+  background-color: $watusi
+  border-radius: 50%
+  display: inline-block !important

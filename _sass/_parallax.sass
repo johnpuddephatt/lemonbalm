@@ -1,3 +1,55 @@
+.viewport
+  position: absolute
+  transform: translateZ(0px)
+  width: 100%
+  height: 100%
+  overflow: auto
+  overflow-x: hidden
+  scroll-snap-points-y: repeat(100%)
+  scroll-snap-type: mandatory
+  scroll-snap-destination: 100% 0%
+  transition: background-color 2 * $base-duration linear
+  background-color: $vivid_tangerine
+  svg
+    display: none
+    backface-visibility: hidden
+  &[data-section="1"]
+    .section--one, .section--two
+      svg
+        display: block
+  &[data-section="2"]
+    background-color: $blue_bayoux
+    .section--one, .section--two, .section--three
+      svg
+        display: block
+  &[data-section="3"]
+    background-color: $watusi
+    .section--two, .section--three, .section--four
+      svg
+        display: block
+  &[data-section="4"]
+    background-color: $medium_aquamarine
+    .section--three, .section--four, .section--five
+      svg
+        display: block
+  &[data-section="5"]
+    background-color: $salmon
+    .section--four, .section--five, .section--six
+      svg
+        display: block
+  &[data-section="6"]
+    background-color: $blue_bayoux
+    .section--five, .section--six, .section--seven
+      svg
+        display: block
+  &[data-section="7"]
+    background-color: $puerto_rico
+    .section--six, .section--seven, .section--eight
+      svg
+        display: block
+
+
+
 $perspective: 1px
 
 @mixin perspective($value)
@@ -6,58 +58,19 @@ $perspective: 1px
 
 @media screen and (min-width: $large-screen) and (orientation: landscape)
   @supports ((perspective: 1px) and (not (-webkit-overflow-scrolling: touch)))
-    html, body
+    html.home
       overflow: hidden
-    body
-      transform: translateZ(0px)
-    .viewport
-      position: absolute
-      transform: translateZ(0px)
-      width: 100%
-      height: 100%
-      overflow-x: hidden
-      overflow-y: auto
-      perspective: $perspective
-      perspective-origin: 50% 50%
-      scroll-behavior: smooth
-      transition: background-color 2 * $base-duration linear
-      background-color: $vivid_tangerine
-      svg
-        display: none
-      &[data-section="1"]
-        .section--one, .section--two
-          svg
-            display: block
-      &[data-section="2"]
-        background-color: $blue_bayoux
-        .section--one, .section--two, .section--three
-          svg
-            display: block
-      &[data-section="3"]
-        background-color: $watusi
-        .section--two, .section--three, .section--four
-          svg
-            display: block
-      &[data-section="4"]
-        background-color: $medium_aquamarine
-        .section--three, .section--four, .section--five
-          svg
-            display: block
-      &[data-section="5"]
-        background-color: $salmon
-        .section--four, .section--five, .section--six
-          svg
-            display: block
-      &[data-section="6"]
-        background-color: $blue_bayoux
-        .section--five, .section--six, .section--seven
-          svg
-            display: block
-      &[data-section="7"]
-        background-color: $puerto_rico
-        .section--six, .section--seven, .section--eight
-          svg
-            display: block
+      body
+        transform: translateZ(0px)
+        overflow: hidden
+      .viewport
+        perspective: $perspective
+        perspective-origin: 50% 50%
+        scroll-behavior: smooth
+        scroll-snap-points-y: none
+        scroll-snap-type: none
+
+
 
     .container, .column, .section, .image-inner, [parallax]
       transform-style: preserve-3d

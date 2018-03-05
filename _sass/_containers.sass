@@ -12,11 +12,17 @@ html
   @media screen and (min-width: $xl-screen)
     font-size: 68.75%
 
-
-body,html
-  height: 100%
+html,body
   margin: 0
   padding: 0
+
+
+html.home
+  height: 100%
+  body
+    height: 100vh
+    overflow: hidden
+
 
 svg
   width: 100%
@@ -30,11 +36,11 @@ svg
   overflow: hidden
 
   &--one
-    background-color: $vivid_tangerine
+    // background-color: $vivid_tangerine
   &--two, &--six
-    background-color: $blue_bayoux
+    // background-color: $blue_bayoux
   &--three
-    background-color: $watusi
+    // background-color: $watusi
     color: $mine_shaft
     .slide.container
       @include grid-media($grid-landscape)
@@ -43,30 +49,37 @@ svg
           opacity: 0
 
   &--four
-    background-color: $medium_aquamarine
+    // background-color: $medium_aquamarine
   &--five
-    background-color: $salmon
+    // background-color: $salmon
   &--six
     .section-heading, .pullout-stat
       color: $sugar_cane
   &--seven
-    background-color: $puerto_rico
+    // background-color: $puerto_rico
     .container
       height: calc(100% - #{3 * $base-spacing})
       @media screen and (min-width: $medium-screen)
+        height: calc(100% - #{4 * $base-spacing})
+      @media screen and (min-width: $large-screen)
         height: calc(100% - #{5 * $base-spacing})
+
     .contact--intro
       transition: $base-duration
+      position: relative
+      z-index: 9
       .button
         margin-top: $base-spacing
+        margin-bottom: 0
     .contact--form
       opacity: 0
       max-width: 80%
       position: absolute
-      top: 0
+      z-index: 99
+      top: 50%
       pointer-events: none
       left: 10%
-      transform: translateY(2 * $base-spacing)
+      transform: translateY(-45%)
       transition: $base-duration
       .section-heading
         margin-bottom: $small-spacing
@@ -111,11 +124,12 @@ svg
         background-color: white
         display: flex
         align-items: center
+        color: $blue_bayoux
         justify-content: center
         flex-direction: column
         animation: statusIn 2 * $base-duration forwards
     .slide .contact--form
-      transform: translateY(0)
+      transform: translateY(-50%)
       opacity: 1
       pointer-events: all
     .slide .contact--intro
@@ -158,6 +172,11 @@ svg
   pointer-events: none
   background-image: url(images/clean-gray-paper.png)
   opacity: .5
+  transition: opacity 1s
+
+.js-loading .texture
+  opacity: 0
+  transition: none
 
 .container
   height: 100%
@@ -272,9 +291,12 @@ footer
     height: 3 * $base-spacing
     font-size: modular-scale(-1)
     @media screen and (min-width: $medium-screen)
-      width: 45%
-      height: 5 * $base-spacing
+      width: 75%
+      height: 4 * $base-spacing
       font-size: modular-scale(0)
+    @media screen and (min-width: $large-screen)
+      height: 5 * $base-spacing
+      width: 45%
   p
     margin-bottom: 0
     padding-bottom: 0
@@ -283,7 +305,9 @@ footer
     padding: 0 $small-spacing/2
     font-size: modular-scale(-1)
 
-
+.alert
+  background-color: $white_smoke
+  padding: $base-spacing
 
 .social-icons
   float: left

@@ -13,22 +13,30 @@
 # you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
-title: Lemon Balm – health &amp; wellbeing through gardens &amp; nature
+title: Lemon Balm
+
 email: john@jdp.org.uk
 description: > # this means to ignore newlines until "baseurl:"
-  We’re Lemon Balm, and we get people gardening through structured programmes that achieve results.
-  That means we not only create capable gardeners, we also help develop social skills, improve mobility, increase agility, and work towards other agreed outcomes.
+  Health &amp; wellbeing through gardens &amp; nature
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: jekyllrb
+
+icon: '/images/lemonbalm_icon.svg'
 
 # Build settings
 markdown: kramdown
 gems:
   - jekyll-feed
+  - jekyll-seo-tag
 exclude:
   - Gemfile
   - Gemfile.lock
 
+stripe_public_key: pk_test_pDDvZviBusXG5JVQvdxKzKqf
+
+collections:
+  products:
+    output: true
 # Server config
 # livereload: true
