@@ -10,9 +10,9 @@
 
       document.documentElement.classList.add('js-loading');
 
-      pageImages.forEach(image => {
-        image.addEventListener('load',imageLoaded(image));
-      });
+      for ( var i = 0; i < pageImages.length; i++) {
+        pageImages[i].addEventListener('load',imageLoaded(pageImages[i]));
+      }
 
       function imageLoaded(image){
         imagesLoaded++;
