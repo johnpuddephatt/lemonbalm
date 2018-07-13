@@ -4,13 +4,14 @@
     cursor: default
     &:hover
       transform: none
-      
+
   .button--label + p
     display: none
 
   .fruitandveg
     height: 100%
-    display: none
+    @media (max-width: $large-screen)
+      display: none !important
 
 
   svg.plantpots[parallax]

@@ -1,9 +1,5 @@
 .section--seven
   overflow: hidden
-
-  .wheelbarrow
-    display: none
-
   .plants
     width: 150vw
     bottom: 1.5 * $base-spacing
@@ -11,8 +7,11 @@
     @media screen and (min-width: $medium-screen)
       bottom: 2 * $base-spacing
 
-  .gardenerraking
-    display: none
+  @media (max-width: $large-screen)
+    .gardenerraking
+      display: none !important
+    .wheelbarrow
+      display: none !important
 
   .contact-form
     position: absolute
