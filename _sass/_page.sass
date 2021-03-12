@@ -1,23 +1,61 @@
 .page-header
   background-color: $blue_bayoux
-  padding: 4 * $base-spacing 3 * $base-spacing 3 * $base-spacing
-  .header-logo
-    width: 8 * $base-spacing
-    height: auto
+  .inner
+    max-width: $medium-screen
     margin: 0 auto
+    padding: $base-spacing 0 2 * $base-spacing
+  .back-link
+    display: inline-block
+    color: white
+    font-size: modular-scale(-1)
+    color: $sugar_cane
+    margin-left: $small-spacing
+  .header-logo
+    width: 6 * $base-spacing
+    height: auto
+    margin: -$small-spacing auto $small-spacing
     display: block
   .strapline
     text-align: center
     color: $sugar_cane
-    font-size: modular-scale(1)
-    margin-top: $base-spacing
+    font-size: modular-scale(-1)
     font-family: $heading-font-family
     font-weight: 400
     -webkit-font-smoothing: antialiased
     text-transform: lowercase
+    margin-bottom: 3 * $base-spacing
     line-height: $heading-line-height
+  .page-title
+    padding: 0 $base-spacing
+    font-size: modular-scale(4)
+    color: white
+  .page-description
+    padding: 0 $base-spacing
+    color: white
 
 .page-content
   max-width: $medium-screen
   margin: 2 * $base-spacing auto
-  padding: 2 * $base-spacing
+  padding: 0 $base-spacing 2 * $base-spacing
+  h3
+    margin: 2 * $base-spacing 0 $base-spacing
+    &:first-child
+      margin-top: 0
+  ul
+    margin: $base-spacing 0
+  li
+    &::before
+      background-image: url(/images/leaf.svg)
+      background-position: center
+      background-repeat: no-repeat
+      background-size: 60%
+      content: ''
+      vertical-align: middle
+      display: inline-block
+      height: $base-spacing
+      width: $base-spacing
+      margin-left: -1.35 * $base-spacing
+      margin-right: 0.35 * $base-spacing
+
+    margin-bottom: $small-spacing
+    margin-left: 1.35 * $base-spacing

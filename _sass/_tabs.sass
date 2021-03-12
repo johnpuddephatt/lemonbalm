@@ -1,0 +1,30 @@
+.tabs
+  display: flex
+  flex-wrap: wrap
+
+.input
+  position: absolute
+  opacity: 0
+
+.button
+  width: 100%
+  margin-right: $small-spacing
+
+  .input:focus + &
+    z-index: 1
+
+  .input:checked + &
+    background: $salmon
+    color: black
+
+  @media (min-width: 600px)
+    width: auto !important
+
+.panel
+  display: none
+
+  @media (min-width: 600px)
+    order: 99
+
+  .input:checked + .button + &
+    display: block

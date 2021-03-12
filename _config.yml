@@ -33,7 +33,8 @@ exclude:
   - Gemfile
   - Gemfile.lock
 
-stripe_public_key: pk_test_pDDvZviBusXG5JVQvdxKzKqf
+# stripe_public_key: pk_test_pDDvZviBusXG5JVQvdxKzKqf
+stripe_public_key: pk_live_bKe26qsORQY6O11V6gBY84Jm
 
 collections:
   products:

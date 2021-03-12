@@ -1,4 +1,12 @@
 <header class="page-header">
-  <a href="/">{% include images/lemonbalm_logo.svg class="header-logo" %}</a>
-  <div class="strapline">Health and wellbeing through gardens and nature</div>
+  <div class="inner">
+    <a class="back-link" href="/">&larr; Back to homepage</a>
+    <a href="/">{% include images/lemonbalm_logo.svg class="header-logo" %}</a>
+    <div class="strapline">Health and wellbeing through gardens and nature</div>
+
+    <h1 class="page-title">{{ page.title }}</h1>
+    <div class="page-description">
+      {{ page.description | markdownify }}
+    </div>
+  </div>
 </header>

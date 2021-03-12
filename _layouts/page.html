@@ -9,6 +9,20 @@
 
     <main class="page-content">
         {{ content }}
+
+        {% if page.tabs %}
+          <div class="tabs">
+            {% for tab in page.tabs %}
+            <input name="tabs" type="radio" id="tab-{{ forloop.index }}" {% if forloop.index == 1 %}checked="checked"{% endif %} class="input"/>
+            <label for="tab-{{ forloop.index }}" class="button ">{{ tab.title }}</label>
+            <div class="panel">
+              {{ tab.content | markdownify }}
+            </div>
+            {% endfor %}
+          </div>
+        {% endif %}
+
+
     </main>
 
     <div class="texture"></div>

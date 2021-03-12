@@ -1,0 +1,39 @@
+---
+layout: page
+title:  "Our approach"
+description: |
+  We design spaces and activities at all scales, ranging from small therapy gardens at home, to larger projects with local authorities. Regardless of scale, every project we do aims to improve people’s health and benefit the environment at the same time.
+
+  Whether you would like one stage of the process or are interested in the whole approach, [get in touch for a free initial consultation](mailto: isabel@lemonbalm.org.uk) to discuss your project to see how we can help.
+tabs:
+- title: Space
+  content: |
+    Space to promote wellbeing & support climate resilience. We provide landscape design services focusing on encouraging active and passive wellbeing. We work with your project from initial idea all the way through to completion and handover.
+
+    - **Survey and Analysis.** We start each project by reviewing the existing space, observing what exists already and identifying the challenges and opportunities of the space. By looking at what is already there we will be able to design a place that works within its surroundings and makes the most of natural features.
+    - **Community Consultations.** Speaking to people who already use the space or would be impacted if the space where to change is a crucial step in our design process. Gathering the insight of current and potential future users of the space helps to ensure that the design meets the needs of the people who use it and will help foster ownership in the longer term.
+    - **Co-Design Workshops.** We plan and run workshops that allow people and communities to participate in the design process. The workshops are bespoke and tailored to the project, context and participants. They could for example be, table top sessions, model making workshops or even play activities. The co-design process helps to create a space that meets the needs of the people who will use the space. It can also help people and communities to engage in the ongoing life and maintenance of the space.
+    - **Masterplanning.** This process takes an overall look at the site and creates a shared vision that could be developed over a long period of time. A masterplan sets out functions and activities now and in the future. A plan like this allows for an ambitious goal to be broken down into small and achievable steps that can be individually funded.
+    - **Conceptualising the Space.** We design landscapes at all scales from an ecological and wellbeing perspective. At this stage we build upon the survey and analysis, community consultations and co-design workshops to produce a design for the space. In order to communicate the design we produce drawings of different options to gain feedback from community members and other stakeholders.
+    - **Detailed and Technical Design.** Once a design has been developed and agreed upon the design team will figure out the precise details of how the space will be constructed. This means we can work out how much it will cost and the additional level of detail in the pictures can help funders really 'buy into' your project and help it to become a reality. We will produce a set of detailed drawings that the contractor will use to build the project.
+    - **Project Management.** To ensure that the project runs smoothly and to schedule we will be on hand to manage the project with the contractors and suppliers. By managing the project ourselves we can ensure that the project is built to a high standard and it also allows us to plan in sessions for volunteers to get involved with elements of the construction.
+- title: Enablers
+  content: |
+    Enablers to get your project off the ground and setting it up to run smoothly. Considering the environmental sustainability and longevity of your space and the activities that go on there.
+
+    - **Strategy.** We can help trusteed, and senior managers to develop the overarching development strategies (which can underpin departmental action plans), in order to steer their organisations through a gradual change towards a more climate resilient, healthy and well organisation. 
+    -  **Volunteer Engagement.** We can help you to recruit and support volunteers who are already involved in the space and help engage others who will be once the project is completed. Engaging early and meaningfully can help retain volunteers and allow them to undertake roles that they find fulfilling.
+    - **Landscape Management & Garden Maintenance.** We produce management guides that are easy to interpret for staff and volunteers. They are designed to make it straightforward for people who manage volunteering groups to design sessions that can be adapted depending on the groups needs. A clear and concise guide ensures that a space remains well looked after. We can also visit quarterly to help embed new strategies throughout the seasons.
+    - **Funding.** Most projects we work with require funding of some sort, we are able to support organisations get funding through help with bid writing, developing funding strategies and producing illustrations to support applications. Working with designers who have experience in raising funds for a project can help ensure that a project comes into fruition and can even increase the budget.
+    - **Involving the whole organisation.** Projects and programmes often involve lots of people across an organisation who need to work together to establish and run it successfully. We work across departments to ensure that everyone involved in the space or project is part of the process and working towards a common goal.
+    - **Health and Safety and Safeguarding.** To run a site and or a program that involves people you need to understand the basic legal responsibilities to ensure that everyone is safe and the site runs safely and smoothly. We can support you to understand what knowledge and policies you will need to be aware of and help undertaking risk assessments.
+    - **Recruitment.** We can help create job specifications, interview candidates and recruit the right people. For volunteering and paid roles. Because, having people with the right skills is important to the long term success of any project or space.
+- title: Programmes of activities
+  content: |
+    Designing and running bespoke and thoughtful programs with measurable and proven outcomes.
+
+    - **Designing a programme or curriculum.** We can design programmes or curriculums of therapeutic, nature based activity with measurable health, wellbeing or social outcomes for you. Having a bespoke programme or curriculum allows the activity to be tailored to your organisational aims and the needs of your community. Examples include; growing your own food for a healthy heart. Walking in nature with mindfulness to reduce stress and Community building through co-creating a pocket park.
+    - **We can deliver one-off taster sessions.** These can be an introduction to gardening, bushcraft, walking and mindfulness and many more. We consider space, equipment, timings, risk assessments and safeguarding measures to allow us to run the best possible session.
+    - **Monitoring and evaluating the outcome and impacts of the programme.** Monitoring the impacts of the programme using surveys and forums to help gauge the impact of the programme on people's wellbeing. Monitoring in this way helps build evidence of a programme's strengths and weaknesses that can be used to develop the programme further in the future and support funding bids.
+    - **Recruiting and retaining participants for the programme.** Working with stakeholders and social prescribers to recruit participants. Using our skills to tailor the programmes to participants to help retain and bring the best possible benefits to the participants. Ensuring that the right participants are able to participate and continue to take part in the programmes will ensure that there is a greater benefit to them as individuals.
+---
