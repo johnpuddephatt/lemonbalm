@@ -39,5 +39,7 @@ stripe_public_key: pk_live_bKe26qsORQY6O11V6gBY84Jm
 collections:
   products:
     output: true
+  projects:
+    output: true
 # Server config
 # livereload: true

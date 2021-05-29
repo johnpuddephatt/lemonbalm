@@ -17,13 +17,12 @@
 .button
   background-color: $sugar_cane
   border: none
-  height: 2 * $base-spacing
   padding: 0 $base-spacing
   display: inline-block
   clear: both
   font-weight: bold
   margin-top: $small-spacing
-  border-radius: 2 * $base-spacing
+  border-radius: $base-spacing
   line-height: 2 * $base-spacing
   position: relative
   color: $blue_bayoux
@@ -31,15 +30,31 @@
   cursor: pointer
   appearance: none
   width: 100%
-  @include grid-media($grid-landscape)
-    margin-bottom: $base-spacing
   &--small
     height: 1.5 * $base-spacing
     line-height: 1.5 * $base-spacing
     font-size: modular-scale(0) !important
+  &--multiline
+    border-radius: $small-spacing
+    line-height: $base-spacing
+    padding: $small-spacing $base-spacing
+    text-align: left
+    h5
+      font-family: $base-font-family
+      font-weight: 700
+      margin-bottom: 0
+      font-size: modular-scale(0)
+      margin-bottom: $small-spacing/3
+    p
+      font-size: modular-scale(-1)
+      line-height: 1.2
+      margin-bottom: $small-spacing/2
+      font-weight: 400
+
 
 
 .button--label
+  font-weight: normal
   @include grid-media($grid-landscape)
     border-radius: 2 * $base-spacing 100% 100% 2 * $base-spacing
     margin-bottom: $small-spacing
@@ -80,22 +95,25 @@
     margin-top: $base-spacing
     margin-bottom: $small-spacing/2
 
+.pullout-stat
+  display: flex
+  align-items: center
+  margin-top: 2 * $base-spacing
+
 .pullout-stat-heading
-  font-size: modular-scale(9)
+  margin-right: $small-spacing
+  font-size: modular-scale(7)
   font-family: $heading-font-family
   line-height: .8
   margin-bottom: 0
   @media screen and (min-width: $medium-screen)
-    font-size: modular-scale(10)
+    font-size: modular-scale(8)
     line-height: 1
 
 .pullout-stat-body
-  font-size: modular-scale(1)
-  font-family: $heading-font-family
+  font-size: modular-scale(0)
   line-height: $heading-line-height
   -webkit-font-smoothing: antialiased
-
-
 
 @import 'parallax'
 

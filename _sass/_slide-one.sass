@@ -43,11 +43,39 @@ svg.garland g.garland-leaf path
   @media screen and (min-width: $medium-screen)
     font-size: modular-scale(5)
 
+.homepage-subtitle
+  margin-top: 1.5 * $base-spacing
+  margin-bottom: $small-spacing/2
+  font-family: $base-font-family
+  font-size: modular-scale(0)
+  font-weight: bold
+
+
+.homepage-message
+  transition: opacity 1.5s 1s cubic-bezier(0.27, 0.09, 0.4, 0.88), transform 1.5s 1s cubic-bezier(0.27, 0.09, 0.4, 0.88)
+  .js-loading &
+    transform: translateY($base-spacing)
+    opacity: 0
+    transition: none
+
+.homepage-buttons
+  max-width: $medium-screen
+  margin: 0 auto
+  display: flex
+  flex-direction: column
+  gap: 1em
+
+  @media screen and (min-width: $large-screen)
+    flex-direction: row
+  .button
+    flex: 0 1 50%
+    margin: 0
+
 
 .lemonbalm-logo
   width: auto
   height: 2.5 * $base-spacing
-  margin: 0 auto -1.5 * $base-spacing
+  margin: 0 auto $small-spacing
   transition: opacity 1.5s .5s cubic-bezier(0.27, 0.09, 0.4, 0.88), transform 1.5s .5s cubic-bezier(0.27, 0.09, 0.4, 0.88)
   .js-loading &
     transform: translateY($base-spacing)
@@ -55,7 +83,7 @@ svg.garland g.garland-leaf path
     transition: none
   @media screen and (min-width: $medium-screen)
     height: 3 * $base-spacing
-    margin: 0 auto -3 * $base-spacing
+    margin: 0 auto $base-spacing
 
 
 .garland
@@ -66,14 +94,14 @@ svg.garland g.garland-leaf path
   max-height: 70%
   transition: opacity 1s cubic-bezier(0.27, 0.09, 0.4, 0.88), transform 1s cubic-bezier(0.27, 0.09, 0.4, 0.88)
   &--upper
-    top: -15vh
+    top: -30vh
     .js-loading &
       transform: translate(-50%,-$base-spacing)
       opacity: 0
       transition: none
 
   &--lower
-    bottom: -5vh
+    bottom: 0vh
     .js-loading &
       transform: translate(-50%,$base-spacing)
       opacity: 0
@@ -96,6 +124,6 @@ svg.garland g.garland-leaf path
 
     .garland
       &--upper
-        bottom: 52.5%
+        bottom: 57.5%
       &--lower
-        bottom: (-9/16 * 10) + vw
+        bottom: (-9/16 * 20) + vw

@@ -1,33 +1,34 @@
 #{$all-buttons} {
   -webkit-appearance: none;
-     -moz-appearance: none;
-          appearance: none;
-  border: .2rem solid $ochre;
+  -moz-appearance: none;
+  appearance: none;
+  border: 0.2rem solid $ochre;
   color: $ochre;
   display: inline-block;
   min-width: 70%;
   margin-bottom: $small-spacing;
   padding: 0 $base-spacing;
-  border-radius: $base-spacing;
+  border-radius: 0.2em;
   cursor: pointer;
   padding: $small-spacing $base-spacing;
   text-align: center;
   text-decoration: none;
   transition: background-color $base-duration $base-timing;
   -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
   vertical-align: middle;
   white-space: nowrap;
   position: relative;
   @media screen and (min-width: $large-screen) and (orientation: landscape) {
-    @supports (((-webkit-perspective: 1px) or (perspective: 1px)) and (not (-webkit-overflow-scrolling: touch))) {
+    @supports (
+      ((-webkit-perspective: 1px) or (perspective: 1px)) and
+        (not (-webkit-overflow-scrolling: touch))
+    ) {
       min-width: 35%;
     }
   }
-
-
 
   &:hover,
   &:focus {
@@ -43,5 +44,4 @@
       background-color: $action-color;
     }
   }
-
 }

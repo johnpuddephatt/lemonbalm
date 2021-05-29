@@ -8,7 +8,9 @@
 
 .button
   width: 100%
-  margin-right: $small-spacing
+
+  + .button
+    margin-left: $small-spacing
 
   .input:focus + &
     z-index: 1

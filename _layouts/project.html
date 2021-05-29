@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html class="no-js shop" lang="">
+
+  {% include head.html %}
+
+  <body>
+
+    <header class="page-header">
+      <div class="inner">
+        <a class="back-link" href="/">&larr; Back to homepage</a>
+        <a href="/">{% include images/lemonbalm_logo.svg class="header-logo" %}</a>
+        <div class="strapline">Health and wellbeing through gardens and nature</div>
+        <h1 class="page-title">{{ page.title }}</h1>
+        <div class="page-description">
+          {{ page.description | markdownify }}
+        </div>
+      </div>
+    </header>
+
+    <main class="page-content">
+      <ul>
+        <li><strong>Client:</strong> {{ page.client}}</li>
+        <li><strong>Location:</strong> {{ page.location }}</li>
+        <li><strong>Date:</strong> {{ page.project_date }}</li>
+        <li><strong>Our role:</strong> {{ page.role }}</li>
+        <li><strong>Services provided:</strong> {{ page.services }}</li>
+      </ul>
+      {{ content }}
+    </main>
+
+    <div class="texture"></div>
+
+    <footer>
+      <div class="footer-inner">
+        <ul class="social-icons">
+          <li><a href="https://www.facebook.com/lemonbalmth/" class="social-facebook">{% include /images/facebook.svg %}</a></li>
+          <li><a href="https://www.instagram.com/IzzLemonBalm/" class="social-instagram">{% include /images/instagram.svg %}</a></li>
+        </ul>
+        <p>Lemon Balm Horticultural Therapy is a Community Interest Company, registered company number 09740573.</p>
+      </div>
+    </footer>
+
+    {% include footer.html %}
+
+  </body>
+
+</html>

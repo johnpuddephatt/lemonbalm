@@ -243,11 +243,14 @@ svg
         flex: 0 0 44%
   &--welcome
     text-align: center
+    margin-bottom: 2 * $base-spacing
     @include grid-media($grid-landscape)
       @media screen and (min-width: $large-screen)
         @include grid-column(10)
         margin-left: auto
         margin-right: auto
+        margin-bottom: -2 * $base-spacing
+
   &--contact
     text-align: center
     @media screen and (min-width: $medium-screen)
