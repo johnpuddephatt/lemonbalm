@@ -1,6 +1,6 @@
 ---
 layout: product
-title:  "Garden guidance voucher"
+title: "Garden guidance voucher"
 description: "We’ll help you – or someone you care about – create the perfect garden"
 shippable: true
 price: 100
@@ -8,7 +8,6 @@ sku: "sku_Bz1N7smNYA2wB6"
 ---
 
 Purchasing a Lemon Balm consultation will allow us to find out about specific needs and give practical advice on creating the perfect garden.
-
 
 ## How does the voucher work?
 
@@ -25,4 +24,3 @@ We’ll visit you (or the recipient) at home and look at the garden with you, fi
 All of this information will then be typed up into a report which you can refer to in future. Each report will be tailored to you, but typically it might include basic sketches or details which you can use yourself for guidance, or show to tradespeople to make small changes. It could also include lists of plants or materials which could work well.
 
 - **Refunds:** if, after receiving your report, you are not 100% happy with the service we will give you a full refund.
-- **Garden design service:** we can also offer a full garden design service. Please email [hello@lemonbalm.org.uk](mailto:hello@lemonbalm.org.uk) or call 07595471597 for more info.
